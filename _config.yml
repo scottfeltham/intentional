@@ -3,8 +3,8 @@ title: Intentional Group
 email: charles.donald@intentional.ae
 description: >-
   The Intentional Group - Excellence in Education and Fitout Solutions
-baseurl: ""
-url: "https://intentional.ae"
+baseurl: "/intentional"
+url: "https://scottfeltham.github.io"
 
 # Build settings
 markdown: kramdown
