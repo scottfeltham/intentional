@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="business-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ page.hero_image }}') center/cover; background-color: {{ page.color | default: '#7890ab' }};">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p class="business-tagline">{{ page.tagline }}</p>
+  </div>
+</div>
+
+<article class="business-page">
+  <div class="container">
+    {{ content }}
+  </div>
+</article>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Work With Us?</h2>
+    <p>Get in touch to discuss your project</p>
+    <a href="mailto:{{ page.email | default: site.email }}" class="btn btn-primary">Contact {{ page.title }}</a>
+  </div>
+</section>

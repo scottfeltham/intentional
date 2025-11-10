@@ -1,0 +1,35 @@
+# Site settings
+title: Intentional Group
+email: charles.donald@intentional.ae
+description: >-
+  The Intentional Group - Excellence in Education and Fitout Solutions
+baseurl: ""
+url: "https://intentional.ae"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  businesses:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "businesses"
+    values:
+      layout: "business"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container">
+      <a href="/" class="logo">
+        <img src="{{ '/assets/images/intentional-logo.png' | relative_url }}" alt="Intentional Group" class="logo-img">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/businesses/intentional-fitout/">Fitout</a></li>
+        <li><a href="/businesses/intentional-education/">Education</a></li>
+        <li><a href="mailto:info@intentional.ae">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>The Intentional Group</h4>
+          <p>Excellence in Education and Fitout Solutions</p>
+        </div>
+        <div class="footer-section">
+          <h4>Our Businesses</h4>
+          <ul>
+            <li><a href="/businesses/intentional-fitout/">Intentional Fitout</a></li>
+            <li><a href="/businesses/intentional-education/">Intentional Education</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:charles.donald@intentional.ae">charles.donald@intentional.ae</a></p>
+          <p>Phone: <a href="tel:+971504519627">+971 50 451 9627</a></p>
+          <p>P.O. Box 72528 Dubai, UAE</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ 'now' | date: "%Y" }} The Intentional Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
