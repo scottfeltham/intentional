@@ -11,13 +11,13 @@
 <body>
   <header class="site-header">
     <nav class="container">
-      <a href="/" class="logo">
+      <a href="{{ '/' | relative_url }}" class="logo">
         <img src="{{ '/assets/images/intentional-logo.png' | relative_url }}" alt="Intentional Group" class="logo-img">
       </a>
       <ul class="nav-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/businesses/intentional-fitout/">Fitout</a></li>
-        <li><a href="/businesses/intentional-education/">Education</a></li>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/businesses/intentional-fitout/' | relative_url }}">Fitout</a></li>
+        <li><a href="{{ '/businesses/intentional-education/' | relative_url }}">Education</a></li>
         <li><a href="mailto:charles.donald@intentional.ae">Contact</a></li>
       </ul>
     </nav>
@@ -37,8 +37,8 @@
         <div class="footer-section">
           <h4>Our Businesses</h4>
           <ul>
-            <li><a href="/businesses/intentional-fitout/">Intentional Fitout</a></li>
-            <li><a href="/businesses/intentional-education/">Intentional Education</a></li>
+            <li><a href="{{ '/businesses/intentional-fitout/' | relative_url }}">Intentional Fitout</a></li>
+            <li><a href="{{ '/businesses/intentional-education/' | relative_url }}">Intentional Education</a></li>
           </ul>
         </div>
         <div class="footer-section">
