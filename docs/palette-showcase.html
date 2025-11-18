@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Showcase - The Intentional Group</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .header {
+      background: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    .header p {
+      font-size: 1.25rem;
+      color: #6c757d;
+    }
+
+    .nav {
+      background: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #7890ab;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #5d7187;
+    }
+
+    .palette-section {
+      background: white;
+      padding: 3rem;
+      margin-bottom: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .palette-section h2 {
+      font-size: 2.5rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid #7890ab;
+    }
+
+    .palette-section h3 {
+      font-size: 1.75rem;
+      color: #333;
+      margin: 2rem 0 1rem;
+    }
+
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .swatch {
+      text-align: center;
+    }
+
+    .swatch-color {
+      height: 120px;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.125rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .swatch-label {
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.25rem;
+    }
+
+    .swatch-hex {
+      font-family: 'Courier New', monospace;
+      color: #6c757d;
+      font-size: 0.875rem;
+    }
+
+    .example-preview {
+      border: 2px solid #dee2e6;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 2rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .comparison-table th {
+      background: #f8f9fa;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .comparison-table tr:hover {
+      background: #f8f9fa;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin: 0.25rem;
+    }
+
+    .personality-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .code-block {
+      background: #1a1a1a;
+      color: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.875rem;
+      margin: 1rem 0;
+    }
+
+    .decision-box {
+      background: #e7f3ff;
+      border-left: 4px solid #3b82f6;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+
+    .decision-box h4 {
+      color: #1e40af;
+      margin-bottom: 0.75rem;
+    }
+
+    .best-for {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+
+    .best-for h4 {
+      color: #15803d;
+      margin-bottom: 0.75rem;
+    }
+
+    .best-for ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .best-for li:before {
+      content: "✓ ";
+      color: #22c55e;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .palette-section h2 {
+        font-size: 1.75rem;
+      }
+
+      .swatch-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav ul {
+        gap: 1rem;
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Color Palette Showcase</h1>
+    <p>Visual examples and usage guide for The Intentional Group brand palettes</p>
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="#palette-1">Professional Blue-Gray</a></li>
+      <li><a href="#palette-2">Warm Professional</a></li>
+      <li><a href="#palette-3">Modern Minimalist</a></li>
+      <li><a href="#palette-4">UAE Heritage</a></li>
+      <li><a href="#palette-5">Bold Dual-Brand</a></li>
+      <li><a href="#comparison">Comparison</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <!-- PALETTE 1: PROFESSIONAL BLUE-GRAY -->
+    <div class="palette-section" id="palette-1">
+      <h2>Palette 1: Professional Blue-Gray (Default)</h2>
+
+      <h3>Color Swatches</h3>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #7890ab;">#7890ab</div>
+          <div class="swatch-label">Primary Color</div>
+          <div class="swatch-hex">Fitout / Established</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #5d7187;">#5d7187</div>
+          <div class="swatch-label">Secondary Color</div>
+          <div class="swatch-hex">Education / Growing</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #8fa3b8;">#8fa3b8</div>
+          <div class="swatch-label">Accent Color</div>
+          <div class="swatch-hex">Highlights / Hover</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1a1a1a;">#1a1a1a</div>
+          <div class="swatch-label">Dark</div>
+          <div class="swatch-hex">Text / Footer</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #f8f9fa; color: #333; text-shadow: none;">#f8f9fa</div>
+          <div class="swatch-label">Light</div>
+          <div class="swatch-hex">Backgrounds</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #333333;">#333333</div>
+          <div class="swatch-label">Text Color</div>
+          <div class="swatch-hex">Body Copy</div>
+        </div>
+      </div>
+
+      <h3>Live Examples</h3>
+
+      <!-- Hero Example -->
+      <div class="example-preview">
+        <div style="
+          background: linear-gradient(135deg, #7890ab 0%, #5d7187 100%);
+          color: white;
+          padding: 4rem 2rem;
+          text-align: center;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;">
+          <div style="max-width: 800px;">
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+              The Intentional Group
+            </h1>
+            <p style="font-size: 1.5rem; font-weight: 300; opacity: 0.95; margin-bottom: 2rem;">
+              Building Excellence Through Education and Design
+            </p>
+            <a href="#" style="
+              display: inline-block;
+              background: white;
+              color: #7890ab;
+              padding: 1rem 2rem;
+              border-radius: 6px;
+              text-decoration: none;
+              font-weight: 600;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+              Explore Our Businesses
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Cards Example -->
+      <div class="example-preview">
+        <div style="background: #f8f9fa; padding: 3rem 2rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+            <!-- Fitout Card -->
+            <div style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #7890ab;">
+              <h3 style="font-size: 1.75rem; color: #1a1a1a; margin-bottom: 0.5rem;">Intentional Fitout</h3>
+              <span style="display: block; font-size: 0.875rem; color: #6c757d; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">Established Business</span>
+              <p style="color: #333; line-height: 1.7; margin-bottom: 1.5rem;">
+                Expert fitout solutions for offices and educational spaces across the UAE.
+              </p>
+              <a href="#" style="
+                display: inline-block;
+                background: #7890ab;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;">
+                Learn More
+              </a>
+            </div>
+
+            <!-- Education Card -->
+            <div style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+              <h3 style="font-size: 1.75rem; color: #1a1a1a; margin-bottom: 0.5rem;">Intentional Education</h3>
+              <span style="display: block; font-size: 0.875rem; color: #6c757d; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">Growing Division</span>
+              <p style="color: #333; line-height: 1.7; margin-bottom: 1.5rem;">
+                Innovative educational programs designed to empower learners and educators.
+              </p>
+              <a href="#" style="
+                display: inline-block;
+                background: #5d7187;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="best-for">
+        <h4>Best For</h4>
+        <ul>
+          <li>Professional B2B services</li>
+          <li>UAE corporate market</li>
+          <li>Balanced dual-brand presentation</li>
+          <li>Construction + Education industries</li>
+          <li>Trustworthy, established positioning</li>
+        </ul>
+      </div>
+
+      <div class="personality-tags">
+        <span class="badge" style="background: #e7f3ff; color: #1e40af;">Sophisticated</span>
+        <span class="badge" style="background: #e7f3ff; color: #1e40af;">Professional</span>
+        <span class="badge" style="background: #e7f3ff; color: #1e40af;">Balanced</span>
+        <span class="badge" style="background: #e7f3ff; color: #1e40af;">Trustworthy</span>
+        <span class="badge" style="background: #e7f3ff; color: #1e40af;">Modern</span>
+      </div>
+    </div>
+
+    <!-- PALETTE 2: WARM PROFESSIONAL -->
+    <div class="palette-section" id="palette-2">
+      <h2>Palette 2: Warm Professional</h2>
+
+      <h3>Color Swatches</h3>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #2d5f8d;">#2d5f8d</div>
+          <div class="swatch-label">Deep Professional Blue</div>
+          <div class="swatch-hex">Primary</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #c17332;">#c17332</div>
+          <div class="swatch-label">Warm Terra Cotta</div>
+          <div class="swatch-hex">Secondary</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #4a7ba7;">#4a7ba7</div>
+          <div class="swatch-label">Light Blue</div>
+          <div class="swatch-hex">Accent</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #2c2c2c;">#2c2c2c</div>
+          <div class="swatch-label">Dark</div>
+          <div class="swatch-hex">Text / Footer</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #faf7f5; color: #333; text-shadow: none;">#faf7f5</div>
+          <div class="swatch-label">Warm Light</div>
+          <div class="swatch-hex">Backgrounds</div>
+        </div>
+      </div>
+
+      <h3>Live Examples</h3>
+
+      <!-- Hero Example -->
+      <div class="example-preview">
+        <div style="
+          background: linear-gradient(135deg, #2d5f8d 0%, #4a7ba7 100%);
+          color: white;
+          padding: 4rem 2rem;
+          text-align: center;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;">
+          <div style="max-width: 800px;">
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+              The Intentional Group
+            </h1>
+            <p style="font-size: 1.5rem; font-weight: 300; opacity: 0.95; margin-bottom: 2rem;">
+              Building Excellence Through Education and Design
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="#" style="
+                display: inline-block;
+                background: white;
+                color: #2d5f8d;
+                padding: 1rem 2rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;">
+                Fitout Services
+              </a>
+              <a href="#" style="
+                display: inline-block;
+                background: #c17332;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;">
+                Education Programs
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Card Example -->
+      <div class="example-preview">
+        <div style="background: #faf7f5; padding: 3rem 2rem;">
+          <div style="max-width: 600px; margin: 0 auto;">
+            <div style="
+              background: white;
+              border-left: 4px solid #c17332;
+              border-radius: 12px;
+              padding: 2.5rem;
+              box-shadow: 0 4px 6px rgba(0,0,0,0.08);">
+
+              <span style="
+                display: inline-block;
+                background: #c17332;
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                font-size: 0.875rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;">
+                Featured Program
+              </span>
+
+              <h3 style="font-size: 1.75rem; color: #2c2c2c; margin-bottom: 1rem;">
+                Professional Development Workshops
+              </h3>
+
+              <p style="font-size: 1.0625rem; color: #333; line-height: 1.8; margin-bottom: 2rem;">
+                Empower your educators with cutting-edge teaching methodologies and
+                evidence-based practices tailored for the UAE education sector.
+              </p>
+
+              <a href="#" style="
+                display: inline-block;
+                background: #c17332;
+                color: white;
+                padding: 0.875rem 2rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;">
+                Explore Workshops
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="best-for">
+        <h4>Best For</h4>
+        <ul>
+          <li>Education-forward positioning</li>
+          <li>More approachable, friendly feel</li>
+          <li>Highlighting education division</li>
+          <li>Differentiating from pure construction firms</li>
+          <li>Marketing to educational institutions</li>
+        </ul>
+      </div>
+
+      <div class="personality-tags">
+        <span class="badge" style="background: #fff4ed; color: #c2410c;">Approachable</span>
+        <span class="badge" style="background: #fff4ed; color: #c2410c;">Warm</span>
+        <span class="badge" style="background: #fff4ed; color: #c2410c;">Professional</span>
+        <span class="badge" style="background: #fff4ed; color: #c2410c;">Innovative</span>
+        <span class="badge" style="background: #fff4ed; color: #c2410c;">People-Focused</span>
+      </div>
+    </div>
+
+    <!-- PALETTE 3: MODERN MINIMALIST -->
+    <div class="palette-section" id="palette-3">
+      <h2>Palette 3: Modern Minimalist</h2>
+
+      <h3>Color Swatches</h3>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #0f172a;">#0f172a</div>
+          <div class="swatch-label">Deep Slate</div>
+          <div class="swatch-hex">Primary</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #3b82f6;">#3b82f6</div>
+          <div class="swatch-label">Bright Blue</div>
+          <div class="swatch-hex">Secondary</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #60a5fa;">#60a5fa</div>
+          <div class="swatch-label">Light Blue</div>
+          <div class="swatch-hex">Accent</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #020617;">#020617</div>
+          <div class="swatch-label">Deep Dark</div>
+          <div class="swatch-hex">Text / Footer</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #f8fafc; color: #333; text-shadow: none;">#f8fafc</div>
+          <div class="swatch-label">Cool Light</div>
+          <div class="swatch-hex">Backgrounds</div>
+        </div>
+      </div>
+
+      <h3>Live Examples</h3>
+
+      <!-- Modern Hero -->
+      <div class="example-preview">
+        <div style="
+          background: #0f172a;
+          color: white;
+          padding: 5rem 2rem;
+          text-align: center;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;">
+          <div style="max-width: 800px;">
+            <span style="
+              display: inline-block;
+              background: linear-gradient(90deg, #3b82f6, #60a5fa);
+              padding: 0.5rem 1.5rem;
+              border-radius: 50px;
+              font-size: 0.875rem;
+              font-weight: 600;
+              margin-bottom: 2rem;">
+              Innovation in Construction & Education
+            </span>
+
+            <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem;">
+              The Intentional Group
+            </h1>
+
+            <p style="font-size: 1.25rem; color: #94a3b8; margin-bottom: 2.5rem; line-height: 1.7;">
+              Transforming workspaces and educational experiences through
+              thoughtful design and innovative solutions
+            </p>
+
+            <a href="#" style="
+              display: inline-block;
+              background: #3b82f6;
+              color: white;
+              padding: 1.125rem 2.5rem;
+              border-radius: 8px;
+              text-decoration: none;
+              font-weight: 600;
+              font-size: 1.125rem;
+              box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);">
+              Get Started →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Cards -->
+      <div class="example-preview">
+        <div style="padding: 3rem 2rem; background: #f8fafc;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+            <!-- Fitout Card -->
+            <div style="
+              background: white;
+              border: 1px solid #e2e8f0;
+              border-radius: 16px;
+              padding: 2.5rem;">
+
+              <div style="
+                width: 48px;
+                height: 48px;
+                background: #0f172a;
+                border-radius: 12px;
+                margin-bottom: 1.5rem;">
+              </div>
+
+              <h3 style="
+                font-size: 1.75rem;
+                color: #0f172a;
+                font-weight: 700;
+                margin-bottom: 1rem;">
+                Intentional Fitout
+              </h3>
+
+              <p style="
+                color: #64748b;
+                line-height: 1.7;
+                margin-bottom: 2rem;">
+                Modern office and educational spaces designed for the future of work and learning.
+              </p>
+
+              <a href="#" style="
+                color: #3b82f6;
+                text-decoration: none;
+                font-weight: 600;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;">
+                Explore services →
+              </a>
+            </div>
+
+            <!-- Education Card with gradient -->
+            <div style="
+              background: linear-gradient(135deg, #3b82f6, #60a5fa);
+              border-radius: 16px;
+              padding: 2.5rem;
+              color: white;">
+
+              <div style="
+                width: 48px;
+                height: 48px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 12px;
+                margin-bottom: 1.5rem;">
+              </div>
+
+              <h3 style="
+                font-size: 1.75rem;
+                font-weight: 700;
+                margin-bottom: 1rem;">
+                Intentional Education
+              </h3>
+
+              <p style="
+                opacity: 0.95;
+                line-height: 1.7;
+                margin-bottom: 2rem;">
+                Innovative educational programs leveraging technology and evidence-based practices.
+              </p>
+
+              <a href="#" style="
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 0.75rem 1.5rem;
+                border-radius: 6px;">
+                Learn more →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="best-for">
+        <h4>Best For</h4>
+        <ul>
+          <li>Tech-forward positioning</li>
+          <li>Startup/innovation focus</li>
+          <li>Younger decision-makers</li>
+          <li>Digital-first services</li>
+          <li>High contrast, accessible design</li>
+        </ul>
+      </div>
+
+      <div class="personality-tags">
+        <span class="badge" style="background: #dbeafe; color: #1e40af;">Innovative</span>
+        <span class="badge" style="background: #dbeafe; color: #1e40af;">Tech-Forward</span>
+        <span class="badge" style="background: #dbeafe; color: #1e40af;">Bold</span>
+        <span class="badge" style="background: #dbeafe; color: #1e40af;">Contemporary</span>
+        <span class="badge" style="background: #dbeafe; color: #1e40af;">Digital-First</span>
+      </div>
+    </div>
+
+    <!-- PALETTE 4: UAE HERITAGE -->
+    <div class="palette-section" id="palette-4">
+      <h2>Palette 4: UAE Heritage</h2>
+
+      <h3>Color Swatches</h3>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #8b6f47;">#8b6f47</div>
+          <div class="swatch-label">Desert Sand</div>
+          <div class="swatch-hex">Primary</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #2c5f6f;">#2c5f6f</div>
+          <div class="swatch-label">Gulf Teal</div>
+          <div class="swatch-hex">Secondary</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #d4a574;">#d4a574</div>
+          <div class="swatch-label">Light Sand</div>
+          <div class="swatch-hex">Accent</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1a1a1a;">#1a1a1a</div>
+          <div class="swatch-label">Dark</div>
+          <div class="swatch-hex">Text / Footer</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #faf8f5; color: #333; text-shadow: none;">#faf8f5</div>
+          <div class="swatch-label">Cream</div>
+          <div class="swatch-hex">Backgrounds</div>
+        </div>
+      </div>
+
+      <h3>Live Examples</h3>
+
+      <!-- Heritage Hero -->
+      <div class="example-preview">
+        <div style="
+          background: linear-gradient(135deg, #2c5f6f 0%, #8b6f47 100%);
+          color: white;
+          padding: 5rem 2rem;
+          text-align: center;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;">
+
+          <div style="max-width: 900px; position: relative; z-index: 1;">
+            <div style="
+              display: inline-block;
+              color: #d4a574;
+              font-size: 0.875rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              margin-bottom: 1.5rem;
+              border: 2px solid #d4a574;
+              padding: 0.5rem 1.5rem;
+              border-radius: 4px;">
+              UAE Excellence Since 2015
+            </div>
+
+            <h1 style="
+              font-size: 3.5rem;
+              font-weight: 700;
+              margin-bottom: 1.5rem;
+              text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">
+              The Intentional Group
+            </h1>
+
+            <p style="font-size: 1.5rem; font-weight: 300; opacity: 0.95; margin-bottom: 2.5rem;">
+              Honoring tradition, embracing innovation in construction and education
+            </p>
+
+            <a href="#" style="
+              display: inline-block;
+              background: #d4a574;
+              color: #1a1a1a;
+              padding: 1rem 2.5rem;
+              border-radius: 4px;
+              text-decoration: none;
+              font-weight: 600;
+              font-size: 1.125rem;
+              letter-spacing: 0.5px;">
+              Discover Our Legacy
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium Card -->
+      <div class="example-preview">
+        <div style="background: #faf8f5; padding: 3rem 2rem;">
+          <div style="max-width: 600px; margin: 0 auto;">
+            <div style="
+              background: white;
+              border-radius: 8px;
+              overflow: hidden;
+              box-shadow: 0 8px 24px rgba(139, 111, 71, 0.15);">
+
+              <div style="
+                background: linear-gradient(135deg, #8b6f47, #d4a574);
+                padding: 3rem;
+                text-align: center;
+                color: white;">
+
+                <h3 style="
+                  font-size: 2rem;
+                  margin-bottom: 0.5rem;
+                  font-weight: 700;">
+                  Premium Office Fitouts
+                </h3>
+
+                <p style="opacity: 0.9; font-size: 1.125rem;">
+                  Crafted with Excellence
+                </p>
+              </div>
+
+              <div style="padding: 2.5rem;">
+                <p style="
+                  color: #333;
+                  line-height: 1.8;
+                  margin-bottom: 2rem;
+                  font-size: 1.0625rem;">
+                  We bring together traditional craftsmanship and modern design to create
+                  spaces that reflect the prestige of your organization.
+                </p>
+
+                <ul style="
+                  list-style: none;
+                  padding: 0;
+                  margin-bottom: 2rem;">
+                  <li style="
+                    padding: 0.75rem 0;
+                    border-bottom: 1px solid #e8e3dc;
+                    color: #333;">
+                    <span style="color: #8b6f47; font-weight: 600; margin-right: 0.5rem;">✦</span>
+                    Luxury Materials & Finishes
+                  </li>
+                  <li style="
+                    padding: 0.75rem 0;
+                    border-bottom: 1px solid #e8e3dc;
+                    color: #333;">
+                    <span style="color: #8b6f47; font-weight: 600; margin-right: 0.5rem;">✦</span>
+                    Master Craftsmen
+                  </li>
+                  <li style="
+                    padding: 0.75rem 0;
+                    color: #333;">
+                    <span style="color: #8b6f47; font-weight: 600; margin-right: 0.5rem;">✦</span>
+                    Bespoke Design Solutions
+                  </li>
+                </ul>
+
+                <a href="#" style="
+                  display: inline-block;
+                  background: #8b6f47;
+                  color: white;
+                  padding: 0.875rem 2rem;
+                  border-radius: 4px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  letter-spacing: 0.5px;">
+                  View Portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="best-for">
+        <h4>Best For</h4>
+        <ul>
+          <li>UAE heritage emphasis</li>
+          <li>Government/institutional clients</li>
+          <li>Traditional educational institutions</li>
+          <li>Luxury fitout projects</li>
+          <li>Premium positioning</li>
+        </ul>
+      </div>
+
+      <div class="personality-tags">
+        <span class="badge" style="background: #fef3c7; color: #92400e;">Heritage-Rich</span>
+        <span class="badge" style="background: #fef3c7; color: #92400e;">Premium</span>
+        <span class="badge" style="background: #fef3c7; color: #92400e;">Cultural</span>
+        <span class="badge" style="background: #fef3c7; color: #92400e;">Trustworthy</span>
+        <span class="badge" style="background: #fef3c7; color: #92400e;">Established</span>
+      </div>
+    </div>
+
+    <!-- PALETTE 5: BOLD DUAL-BRAND -->
+    <div class="palette-section" id="palette-5">
+      <h2>Palette 5: Bold Dual-Brand</h2>
+
+      <h3>Color Swatches</h3>
+
+      <h4 style="color: #1e3a5f; margin: 2rem 0 1rem;">Fitout Brand Colors</h4>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1e3a5f;">#1e3a5f</div>
+          <div class="swatch-label">Construction Navy</div>
+          <div class="swatch-hex">Fitout Primary</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #4a7ba7;">#4a7ba7</div>
+          <div class="swatch-label">Steel Blue</div>
+          <div class="swatch-hex">Fitout Accent</div>
+        </div>
+      </div>
+
+      <h4 style="color: #6b2d5f; margin: 2rem 0 1rem;">Education Brand Colors</h4>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #6b2d5f;">#6b2d5f</div>
+          <div class="swatch-label">Academic Purple</div>
+          <div class="swatch-hex">Education Primary</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #9d5b8b;">#9d5b8b</div>
+          <div class="swatch-label">Light Purple</div>
+          <div class="swatch-hex">Education Accent</div>
+        </div>
+      </div>
+
+      <h3>Live Examples</h3>
+
+      <!-- Dual Hero -->
+      <div class="example-preview">
+        <div style="
+          background: linear-gradient(90deg, #1e3a5f 50%, #6b2d5f 50%);
+          color: white;
+          padding: 4rem 2rem;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;">
+          <div style="max-width: 1200px; width: 100%; text-align: center;">
+            <h1 style="
+              font-size: 3rem;
+              font-weight: 700;
+              margin-bottom: 2rem;
+              text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">
+              The Intentional Group
+            </h1>
+
+            <div style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              gap: 2rem;
+              margin-top: 3rem;">
+
+              <!-- Fitout Side -->
+              <div style="
+                padding: 2rem;
+                border: 2px solid rgba(255,255,255,0.3);
+                border-radius: 12px;
+                background: rgba(255,255,255,0.05);">
+
+                <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">Intentional Fitout</h2>
+                <p style="opacity: 0.9; margin-bottom: 2rem;">
+                  Professional construction and fitout solutions
+                </p>
+                <a href="#" style="
+                  display: inline-block;
+                  background: white;
+                  color: #1e3a5f;
+                  padding: 0.875rem 2rem;
+                  border-radius: 6px;
+                  text-decoration: none;
+                  font-weight: 600;">
+                  Explore Fitout
+                </a>
+              </div>
+
+              <!-- Education Side -->
+              <div style="
+                padding: 2rem;
+                border: 2px solid rgba(255,255,255,0.3);
+                border-radius: 12px;
+                background: rgba(255,255,255,0.05);">
+
+                <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">Intentional Education</h2>
+                <p style="opacity: 0.9; margin-bottom: 2rem;">
+                  Innovative learning and development programs
+                </p>
+                <a href="#" style="
+                  display: inline-block;
+                  background: white;
+                  color: #6b2d5f;
+                  padding: 0.875rem 2rem;
+                  border-radius: 6px;
+                  text-decoration: none;
+                  font-weight: 600;">
+                  Explore Education
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Cards with Strong Colors -->
+      <div class="example-preview">
+        <div style="background: #f8f9fa; padding: 3rem 2rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+            <!-- Fitout Card -->
+            <div style="
+              background: white;
+              border-radius: 12px;
+              overflow: hidden;
+              box-shadow: 0 4px 6px rgba(30, 58, 95, 0.15);">
+
+              <div style="
+                background: #1e3a5f;
+                padding: 2rem;
+                color: white;
+                text-align: center;">
+                <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Intentional Fitout</h3>
+                <span style="
+                  display: inline-block;
+                  background: rgba(255,255,255,0.2);
+                  padding: 0.5rem 1rem;
+                  border-radius: 4px;
+                  font-size: 0.875rem;
+                  font-weight: 600;">
+                  ESTABLISHED 2015
+                </span>
+              </div>
+
+              <div style="padding: 2.5rem;">
+                <p style="color: #333; line-height: 1.7; margin-bottom: 2rem;">
+                  Expert fitout solutions for offices and educational spaces across the UAE
+                </p>
+                <a href="#" style="
+                  display: inline-block;
+                  background: #1e3a5f;
+                  color: white;
+                  padding: 0.75rem 2rem;
+                  border-radius: 6px;
+                  text-decoration: none;
+                  font-weight: 600;">
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            <!-- Education Card -->
+            <div style="
+              background: white;
+              border-radius: 12px;
+              overflow: hidden;
+              box-shadow: 0 4px 6px rgba(107, 45, 95, 0.15);">
+
+              <div style="
+                background: #6b2d5f;
+                padding: 2rem;
+                color: white;
+                text-align: center;">
+                <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Intentional Education</h3>
+                <span style="
+                  display: inline-block;
+                  background: rgba(255,255,255,0.2);
+                  padding: 0.5rem 1rem;
+                  border-radius: 4px;
+                  font-size: 0.875rem;
+                  font-weight: 600;">
+                  GROWING DIVISION
+                </span>
+              </div>
+
+              <div style="padding: 2.5rem;">
+                <p style="color: #333; line-height: 1.7; margin-bottom: 2rem;">
+                  Innovative educational programs designed to empower learners and educators
+                </p>
+                <a href="#" style="
+                  display: inline-block;
+                  background: #6b2d5f;
+                  color: white;
+                  padding: 0.75rem 2rem;
+                  border-radius: 6px;
+                  text-decoration: none;
+                  font-weight: 600;">
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="best-for">
+        <h4>Best For</h4>
+        <ul>
+          <li>Strong brand differentiation needed</li>
+          <li>Independent business recognition</li>
+          <li>Different target audiences</li>
+          <li>Future separate domains/sites</li>
+          <li>Clear service distinction</li>
+        </ul>
+      </div>
+
+      <div class="personality-tags">
+        <span class="badge" style="background: #ede9fe; color: #6b21a8;">Distinct</span>
+        <span class="badge" style="background: #ede9fe; color: #6b21a8;">Bold</span>
+        <span class="badge" style="background: #ede9fe; color: #6b21a8;">Professional</span>
+        <span class="badge" style="background: #ede9fe; color: #6b21a8;">Organized</span>
+        <span class="badge" style="background: #ede9fe; color: #6b21a8;">Differentiated</span>
+      </div>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div class="palette-section" id="comparison">
+      <h2>Palette Comparison</h2>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Professional Blue-Gray</th>
+            <th>Warm Professional</th>
+            <th>Modern Minimalist</th>
+            <th>UAE Heritage</th>
+            <th>Bold Dual-Brand</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Primary Color</strong></td>
+            <td><span style="display: inline-block; width: 20px; height: 20px; background: #7890ab; border-radius: 4px; vertical-align: middle;"></span> #7890ab</td>
+            <td><span style="display: inline-block; width: 20px; height: 20px; background: #2d5f8d; border-radius: 4px; vertical-align: middle;"></span> #2d5f8d</td>
+            <td><span style="display: inline-block; width: 20px; height: 20px; background: #0f172a; border-radius: 4px; vertical-align: middle;"></span> #0f172a</td>
+            <td><span style="display: inline-block; width: 20px; height: 20px; background: #8b6f47; border-radius: 4px; vertical-align: middle;"></span> #8b6f47</td>
+            <td><span style="display: inline-block; width: 20px; height: 20px; background: #1e3a5f; border-radius: 4px; vertical-align: middle;"></span> Navy/Purple</td>
+          </tr>
+          <tr>
+            <td><strong>Vibe</strong></td>
+            <td>Professional</td>
+            <td>Approachable</td>
+            <td>Tech-Forward</td>
+            <td>Premium</td>
+            <td>Distinct</td>
+          </tr>
+          <tr>
+            <td><strong>Best Industry</strong></td>
+            <td>Both Equal</td>
+            <td>Education Focus</td>
+            <td>Digital/Tech</td>
+            <td>Luxury/Heritage</td>
+            <td>Strong Separation</td>
+          </tr>
+          <tr>
+            <td><strong>Contrast</strong></td>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>High</td>
+            <td>Medium</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td><strong>Warmth</strong></td>
+            <td>Neutral</td>
+            <td>Warm</td>
+            <td>Cool</td>
+            <td>Warm</td>
+            <td>Neutral</td>
+          </tr>
+          <tr>
+            <td><strong>Modernity</strong></td>
+            <td>Modern</td>
+            <td>Traditional+</td>
+            <td>Very Modern</td>
+            <td>Classical</td>
+            <td>Modern</td>
+          </tr>
+          <tr>
+            <td><strong>B2B Suitability</strong></td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top: 3rem;">Decision Framework</h3>
+
+      <div class="decision-box">
+        <h4>Choose Professional Blue-Gray (Default) if:</h4>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>You want balanced presentation of both businesses</li>
+          <li>UAE corporate market is primary target</li>
+          <li>Need proven, trustworthy professional feel</li>
+          <li>Want one cohesive brand identity</li>
+          <li>Launching soon and need safe choice</li>
+        </ul>
+      </div>
+
+      <div class="decision-box" style="border-left-color: #c17332; background: #fff4ed;">
+        <h4 style="color: #c2410c;">Choose Warm Professional if:</h4>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>Education division needs more prominence</li>
+          <li>Want approachable, people-focused feel</li>
+          <li>Targeting educational institutions primarily</li>
+          <li>Need differentiation from pure construction firms</li>
+          <li>Value warmth over corporate feel</li>
+        </ul>
+      </div>
+
+      <div class="decision-box" style="border-left-color: #3b82f6; background: #eff6ff;">
+        <h4 style="color: #1e40af;">Choose Modern Minimalist if:</h4>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>Tech integration is key message</li>
+          <li>Targeting younger decision-makers</li>
+          <li>Digital/online services are important</li>
+          <li>Want cutting-edge, innovative positioning</li>
+          <li>High contrast accessibility is priority</li>
+        </ul>
+      </div>
+
+      <div class="decision-box" style="border-left-color: #8b6f47; background: #fefce8;">
+        <h4 style="color: #854d0e;">Choose UAE Heritage if:</h4>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>Local market positioning is critical</li>
+          <li>Government/institutional clients are target</li>
+          <li>Luxury/premium projects are focus</li>
+          <li>Cultural resonance is important</li>
+          <li>Want to emphasize UAE roots and expertise</li>
+        </ul>
+      </div>
+
+      <div class="decision-box" style="border-left-color: #6b2d5f; background: #faf5ff;">
+        <h4 style="color: #6b21a8;">Choose Bold Dual-Brand if:</h4>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>Businesses need strong differentiation</li>
+          <li>Different target audiences for each</li>
+          <li>Planning separate marketing strategies</li>
+          <li>Future separate domains/sites possible</li>
+          <li>Clear service distinction is priority</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="background: #1a1a1a; color: white; padding: 3rem 2rem; text-align: center; margin-top: 4rem;">
+    <p style="opacity: 0.8;">&copy; 2025 The Intentional Group - Design System Documentation</p>
+  </footer>
+
+</body>
+</html>
