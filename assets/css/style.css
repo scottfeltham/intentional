@@ -436,6 +436,20 @@ body {
   color: white;
 }
 
+/* Division-specific outline buttons - must override .btn.landscaping */
+.btn.btn-outline.landscaping {
+  border-color: var(--landscaping-color);
+  color: var(--landscaping-color);
+  background: transparent;
+  background-color: transparent;
+}
+
+.btn.btn-outline.landscaping:hover {
+  background: var(--landscaping-color);
+  background-color: var(--landscaping-color);
+  color: white;
+}
+
 /* Legacy support */
 .business-cards {
   display: grid;
@@ -490,25 +504,64 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: var(--division-color, var(--primary-color));
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #234a88;
+  background-color: var(--division-color, var(--primary-color));
+  filter: brightness(0.85);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(44, 90, 160, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .btn-secondary {
-  background-color: var(--secondary-color);
+  background-color: var(--division-color, var(--secondary-color));
   color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #085f5f;
+  background-color: var(--division-color, var(--secondary-color));
+  filter: brightness(0.85);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(10, 115, 115, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Division-specific button colors */
+.btn.interiors {
+  background-color: var(--interiors-color);
+}
+
+.btn.interiors:hover {
+  background-color: var(--interiors-color);
+  filter: brightness(0.85);
+}
+
+.btn.education {
+  background-color: var(--education-color);
+}
+
+.btn.education:hover {
+  background-color: var(--education-color);
+  filter: brightness(0.85);
+}
+
+.btn.development {
+  background-color: var(--development-color);
+}
+
+.btn.development:hover {
+  background-color: var(--development-color);
+  filter: brightness(0.85);
+}
+
+.btn.landscaping {
+  background-color: var(--landscaping-color);
+}
+
+.btn.landscaping:hover {
+  background-color: var(--landscaping-color);
+  filter: brightness(0.85);
 }
 
 .btn-light {
