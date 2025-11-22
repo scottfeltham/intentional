@@ -1,0 +1,281 @@
+DNS Records Backup for intentional.ae
+=====================================
+Backup Date: 2025-11-21
+Source: DNS Provider (Tasjeel) Management Panel + DNS Lookups
+
+NAMESERVERS
+-----------
+ns3.tasjeel.ae
+ns4.tasjeel.ae
+
+SOA RECORD
+----------
+Primary Nameserver: ns3.tasjeel.ae
+Responsible Party: servers.tasjeel.ae
+Serial: 2025101903
+Refresh: 3600
+Retry: 1800
+Expire: 1209600
+Minimum TTL: 86400
+
+A RECORDS
+---------
+Host: intentional.ae.
+TTL: 14400
+Type: A
+Value: 162.241.225.39
+
+Host: intentional.ae.
+TTL: 14440
+Type: A
+Value: 185.158.133.1
+
+Host: intentional.ae.
+TTL: 14440
+Type: A
+Value: 185.158.133.1
+
+Host: www
+TTL: 14440
+Type: A
+Value: 185.158.133.1
+
+Host: ftp
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: cpcalendars
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: webmail
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: cpanel
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: whm
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: autoconfig
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: cpcontacts
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: autodiscover
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: webdisk
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+Host: mail
+TTL: 14400
+Type: A
+Value: 45.79.251.221
+
+CNAME RECORDS
+-------------
+Host: mail
+TTL: 14400
+Type: CNAME
+Value: karak.tasjeel.ae
+
+MX RECORDS
+----------
+Host: intentional.ae.
+TTL: 14400
+Type: MX
+Priority: 0
+Value: karak.tasjeel.ae
+
+SRV RECORDS
+-----------
+Host: _autodiscover._tcp
+TTL: 14400
+Type: SRV
+Priority: 0
+Port: 443
+Weight: 0
+Target: cpanelemaildiscovery.cpanel.net
+
+Host: _carddavs._tcp
+TTL: 14400
+Type: SRV
+Priority: 0
+Port: 2080
+Weight: 0
+Target: karak.tasjeel.ae
+
+Host: _caldavs._tcp
+TTL: 14400
+Type: SRV
+Priority: 0
+Port: 2080
+Weight: 0
+Target: karak.tasjeel.ae
+
+Host: _caldav._tcp
+TTL: 14400
+Type: SRV
+Priority: 0
+Port: 2079
+Weight: 0
+Target: karak.tasjeel.ae
+
+Host: carddav._tcp
+TTL: 14400
+Type: SRV
+Priority: 0
+Port: 2079
+Weight: 0
+Target: karak.tasjeel.ae
+
+TXT RECORDS
+-----------
+Host: intentional.ae.
+TTL: 14400
+Type: TXT
+Value: v=spf1 +a +mx +ip4:45.79.251.221 include:spf.mysecurecloudhost.com ~all
+
+Host: intentional.ae.
+TTL: 14440
+Type: TXT
+Value: TXT @ lovable_verification=HJcPH3eEJHsjXJGryfjy
+
+Host: _carddavs._tcp
+TTL: 14400
+Type: TXT
+Value: path=/
+
+Host: _caldavs._tcp
+TTL: 14400
+Type: TXT
+Value: path=/
+
+Host: _caldav._tcp
+TTL: 14400
+Type: TXT
+Value: path=/
+
+Host: _carddav._tcp
+TTL: 14400
+Type: TXT
+Value: path=/
+
+Host: default._domainkey
+TTL: 14400
+Type: TXT
+Value: v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3Qzw8vjOFcaXwci9TlrTcSPJS2p5lxSBD3aSrbZ2dnrMeLPqkDlMuxBau6Aog05SvYxmakLkcecJD7TvoLHA0jyhfxrU4VScDGS4/FcAAgF6WTcembyDTajH9Eew+69kHiEFG23OWnMJVGgCp5ez5GANBigrZphXljop78jqbZjLBl27WssjI4nDDHk+CvCMELMU/sH7+VWqyi2bcVEYNuscyeDTHdSAX9v5eLJK9x0sRGPIxh3fw8Kwjckj5U4GQCh/pLriVwMMITrjUgX50g0Ih2ro7t/2GFXVClD9j1ibpCmBUvPVmVZ3SJbzGv11yFvyQKADUwcAP0OLsAx2wIDAQAB;
+
+Host: _cpanel-dcv-test-record
+TTL: 14400
+Type: TXT
+Value: _cpanel-dcv-test-record=yJIymnuesdMNqlLfKMCbXPIeLqJfJzSEoqRuzJIOvzCIm5B2dRV55q3AmKPe1hqF
+
+Host: _acme-challenge
+TTL: 14400
+Type: TXT
+Value: Y6uPG5-AiwV2j5jQZXrsh4SJJily8md6E0idVE77Bno
+
+NOTES
+-----
+- Main domain A records point to two different IPs (162.241.225.39 and 185.158.133.1)
+- Mail services hosted on karak.tasjeel.ae (45.79.251.221)
+- cPanel/WHM services accessible via subdomains
+- CalDAV/CardDAV services configured for calendar and contact sync
+- SPF record configured: v=spf1 +a +mx +ip4:45.79.251.221 include:spf.mysecurecloudhost.com ~all
+- DKIM record present for email signing (2048-bit RSA key)
+- Multiple verification records present (lovable, acme-challenge, cpanel-dcv)
+
+IP ADDRESSES USED
+-----------------
+162.241.225.39 - Primary domain IP
+185.158.133.1 - Secondary domain IP (www)
+45.79.251.221 - Mail and cPanel services
+
+SERVICES IDENTIFIED
+-------------------
+- Web Hosting: Multiple IPs
+- Email: Hosted via Tasjeel (karak.tasjeel.ae) with SPF and DKIM configured
+- SPF Include: spf.mysecurecloudhost.com
+- cPanel/WHM: Control panel access
+- CalDAV/CardDAV: Calendar and contacts sync (ports 2079, 2080)
+- FTP: File transfer access
+- Webmail: Email web interface
+- Autodiscover: Email client auto-configuration via cpanelemaildiscovery.cpanel.net
+
+ZONE FILE FORMAT (BIND-compatible)
+===================================
+
+; Zone file for intentional.ae
+; Generated: 2025-11-21
+
+$TTL 14400
+
+; SOA Record
+@       IN      SOA     ns3.tasjeel.ae. servers.tasjeel.ae. (
+                        2025101903      ; Serial
+                        3600            ; Refresh
+                        1800            ; Retry
+                        1209600         ; Expire
+                        86400 )         ; Minimum TTL
+
+; Nameservers
+@       IN      NS      ns3.tasjeel.ae.
+@       IN      NS      ns4.tasjeel.ae.
+
+; A Records
+@       14400   IN      A       162.241.225.39
+@       14440   IN      A       185.158.133.1
+www     14440   IN      A       185.158.133.1
+ftp     14400   IN      A       45.79.251.221
+cpcalendars     14400   IN      A       45.79.251.221
+webmail 14400   IN      A       45.79.251.221
+cpanel  14400   IN      A       45.79.251.221
+whm     14400   IN      A       45.79.251.221
+autoconfig      14400   IN      A       45.79.251.221
+cpcontacts      14400   IN      A       45.79.251.221
+autodiscover    14400   IN      A       45.79.251.221
+webdisk 14400   IN      A       45.79.251.221
+mail    14400   IN      A       45.79.251.221
+
+; CNAME Records
+mail    14400   IN      CNAME   karak.tasjeel.ae.
+
+; MX Records
+@       14400   IN      MX      0       karak.tasjeel.ae.
+
+; SRV Records
+_autodiscover._tcp      14400   IN      SRV     0 0 443 cpanelemaildiscovery.cpanel.net.
+_carddavs._tcp  14400   IN      SRV     0 0 2080 karak.tasjeel.ae.
+_caldavs._tcp   14400   IN      SRV     0 0 2080 karak.tasjeel.ae.
+_caldav._tcp    14400   IN      SRV     0 0 2079 karak.tasjeel.ae.
+carddav._tcp    14400   IN      SRV     0 0 2079 karak.tasjeel.ae.
+
+; TXT Records
+@       14400   IN      TXT     "v=spf1 +a +mx +ip4:45.79.251.221 include:spf.mysecurecloudhost.com ~all"
+@       14440   IN      TXT     "TXT @ lovable_verification=HJcPH3eEJHsjXJGryfjy"
+_carddavs._tcp  14400   IN      TXT     "path=/"
+_caldavs._tcp   14400   IN      TXT     "path=/"
+_caldav._tcp    14400   IN      TXT     "path=/"
+_carddav._tcp   14400   IN      TXT     "path=/"
+default._domainkey      14400   IN      TXT     "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3Qzw8vjOFcaXwci9TlrTcSPJS2p5lxSBD3aSrbZ2dnrMeLPqkDlMuxBau6Aog05SvYxmakLkcecJD7TvoLHA0jyhfxrU4VScDGS4/FcAAgF6WTcembyDTajH9Eew+69kHiEFG23OWnMJVGgCp5ez5GANBigrZphXljop78jqbZjLBl27WssjI4nDDHk+CvCMELMU/sH7+VWqyi2bcVEYNuscyeDTHdSAX9v5eLJK9x0sRGPIxh3fw8Kwjckj5U4GQCh/pLriVwMMITrjUgX50g0Ih2ro7t/2GFXVClD9j1ibpCmBUvPVmVZ3SJbzGv11yFvyQKADUwcAP0OLsAx2wIDAQAB;"
+_cpanel-dcv-test-record 14400   IN      TXT     "_cpanel-dcv-test-record=yJIymnuesdMNqlLfKMCbXPIeLqJfJzSEoqRuzJIOvzCIm5B2dRV55q3AmKPe1hqF"
+_acme-challenge 14400   IN      TXT     "Y6uPG5-AiwV2j5jQZXrsh4SJJily8md6E0idVE77Bno"

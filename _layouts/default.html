@@ -8,22 +8,35 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% seo %}
 </head>
-<body>
+<body{% if page.color %} style="--division-color: {{ page.color }};"{% endif %}>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="site-header">
     <nav class="container">
       <a href="{{ '/' | relative_url }}" class="logo">
-        <img src="{{ '/assets/images/intentional-logo.png' | relative_url }}" alt="Intentional Group" class="logo-img">
+        <img src="{{ '/assets/images/intentional-logo.png' | relative_url }}" alt="The Intentional Group" class="logo-img">
       </a>
-      <ul class="nav-menu">
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/businesses/intentional-fitout/' | relative_url }}">Fitout</a></li>
-        <li><a href="{{ '/businesses/intentional-education/' | relative_url }}">Education</a></li>
-        <li><a href="mailto:charles.donald@intentional.ae">Contact</a></li>
+
+      <!-- Mobile menu toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/businesses/intentional-interiors/' | relative_url }}" {% if page.url contains 'intentional-interiors' %}class="active"{% endif %}>Interiors</a></li>
+        <li><a href="{{ '/businesses/intentional-education/' | relative_url }}" {% if page.url contains 'intentional-education' %}class="active"{% endif %}>Education</a></li>
+        <li><a href="{{ '/businesses/intentional-development/' | relative_url }}" {% if page.url contains 'intentional-development' %}class="active"{% endif %}>Development</a></li>
+        <li><a href="{{ '/businesses/intentional-landscaping/' | relative_url }}" {% if page.url contains 'intentional-landscaping' %}class="active"{% endif %}>Landscaping</a></li>
+        <li><a href="{{ '/' | relative_url }}#contact" {% if page.url contains 'contact' %}class="active"{% endif %}>Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main{% unless page.url == '/' %} id="main-content"{% endunless %}>
     {{ content }}
   </main>
 
@@ -32,19 +45,20 @@
       <div class="footer-content">
         <div class="footer-section">
           <h4>The Intentional Group</h4>
-          <p>Excellence in Education and Fitout Solutions</p>
+          <p>Excellence in Education, Development, Landscaping and Fitout Solutions</p>
         </div>
         <div class="footer-section">
           <h4>Our Businesses</h4>
           <ul>
-            <li><a href="{{ '/businesses/intentional-fitout/' | relative_url }}">Intentional Fitout</a></li>
+            <li><a href="{{ '/businesses/intentional-interiors/' | relative_url }}">Intentional Interiors</a></li>
             <li><a href="{{ '/businesses/intentional-education/' | relative_url }}">Intentional Education</a></li>
+            <li><a href="{{ '/businesses/intentional-development/' | relative_url }}">Intentional Development</a></li>
+            <li><a href="{{ '/businesses/intentional-landscaping/' | relative_url }}">Intentional Landscaping</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h4>Contact</h4>
-          <p>Email: <a href="mailto:charles.donald@intentional.ae">charles.donald@intentional.ae</a></p>
-          <p>Phone: <a href="tel:+971504519627">+971 50 451 9627</a></p>
+          <p>Email: <a href="mailto:info@intentional.ae">info@intentional.ae</a></p>
           <p>P.O. Box 72528 Dubai, UAE</p>
         </div>
       </div>
@@ -53,5 +67,46 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile menu script -->
+  <script>
+    (function() {
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      const menu = document.querySelector('.nav-menu');
+
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          const isOpen = menu.classList.toggle('is-open');
+          toggle.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close menu when clicking a link
+        menu.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            menu.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
+
+  <!-- TODO: Calendly Integration
+       Uncomment and replace YOUR_CALENDLY_URL when ready to enable booking widget
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      Calendly.initBadgeWidget({
+        url: 'https://calendly.com/YOUR_CALENDLY_URL',
+        text: 'Book a Consultation',
+        color: '#5d7187',
+        textColor: '#ffffff'
+      });
+    });
+  </script>
+  -->
 </body>
 </html>

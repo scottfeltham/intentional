@@ -1,7 +1,8 @@
 ---
 title: Intentional Education
 tagline: Empowering Learning, Inspiring Growth
-color: "#5d7187"
+color: "#1a5f7a"
+color_secondary: "#8b6f47"
 hero_image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=2000&q=80"
 email: education@intentional.ae
 order: 2

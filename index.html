@@ -3,62 +3,79 @@ layout: default
 title: Home
 ---
 
-<div class="hero" style="background: linear-gradient(rgba(93, 113, 135, 0.85), rgba(120, 144, 171, 0.85)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80') center/cover;">
+<div class="hero" style="background: linear-gradient(135deg, rgba(44, 95, 111, 0.9), rgba(139, 111, 71, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80') center/cover;">
   <div class="hero-content">
     <h1>The Intentional Group</h1>
-    <p class="tagline">Building Excellence Through Education and Design</p>
-    <p class="subtitle">Transforming spaces and minds across the UAE</p>
+    <p class="tagline">Building Excellence in Education, Property Development, Landscaping, and Design & Build Interiors</p>
+    <p class="subtitle">Transforming spaces and minds across the UAE and beyond</p>
   </div>
 </div>
 
-<section class="businesses">
+<section class="businesses" id="main-content">
   <div class="container">
     <h2 class="section-title">Our Business Areas</h2>
 
-    <div class="business-cards">
-      <!-- Intentional Fitout -->
-      <div class="business-card featured">
-        <div class="business-image">
-          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Modern office space">
-        </div>
-        <div class="business-content">
-          <h3>Intentional Fitout</h3>
-        <p class="business-status">Established Business</p>
-        <p class="business-description">
-          Expert fitout solutions for offices and educational spaces. With years of experience,
-          we transform environments into functional, inspiring spaces that meet the unique needs
-          of modern workplaces and learning institutions.
-        </p>
-          <ul class="business-highlights">
-            <li>Office Fitouts</li>
-            <li>School & Educational Spaces</li>
-            <li>Complete Project Management</li>
-            <li>Design & Build Services</li>
-          </ul>
-          <a href="{{ site.baseurl }}/businesses/intentional-fitout/" class="btn btn-primary">Learn More</a>
-        </div>
+    <!-- Featured: Intentional Interiors -->
+    <div class="business-card-featured">
+      <div class="featured-image">
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80" alt="Professional office fitout with modern furniture and natural lighting" loading="lazy">
       </div>
+      <div class="featured-content">
+        <span class="featured-badge">Established Business</span>
+        <h3>Intentional Interiors</h3>
+        <p class="featured-description">
+          Expert Design & Build fitout solutions for Offices, Residencies, Food and Beverage Outlets,
+          Hotels and Educational Spaces. With years of experience, we transform environments into
+          functional, inspiring spaces that meet the unique needs of contemporary interiors.
+        </p>
+        <ul class="featured-highlights">
+          <li>Complete Project Management</li>
+          <li>Design & Build Services</li>
+          <li>Working to Budget</li>
+          <li>Meeting Agreed Timelines</li>
+        </ul>
+        <a href="{{ site.baseurl }}/businesses/intentional-interiors/" class="btn btn-primary">Explore Our Services</a>
+      </div>
+    </div>
 
+    <!-- Other Divisions Grid -->
+    <div class="business-cards-grid">
       <!-- Intentional Education -->
       <div class="business-card">
         <div class="business-image">
-          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Students learning">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Students engaged in collaborative learning" loading="lazy">
         </div>
         <div class="business-content">
+          <span class="card-badge education">Growing Division</span>
           <h3>Intentional Education</h3>
-        <p class="business-status">Growing Division</p>
-        <p class="business-description">
-          Innovative educational programs and services designed to empower learners and
-          educators. We're building the future of education through thoughtful curriculum
-          development and learning solutions.
-        </p>
-          <ul class="business-highlights">
-            <li>Educational Consulting</li>
-            <li>Curriculum Development</li>
-            <li>Professional Development</li>
-            <li>Learning Solutions</li>
-          </ul>
-          <a href="{{ site.baseurl }}/businesses/intentional-education/" class="btn btn-secondary">Learn More</a>
+          <p>Innovative educational programs designed to empower learners and educators.</p>
+          <a href="{{ site.baseurl }}/businesses/intentional-education/" class="btn btn-secondary">Discover Programs</a>
+        </div>
+      </div>
+
+      <!-- Intentional Development -->
+      <div class="business-card">
+        <div class="business-image">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Modern high-rise building under development" loading="lazy">
+        </div>
+        <div class="business-content">
+          <span class="card-badge development">Development & PM</span>
+          <h3>Intentional Development</h3>
+          <p>Development Management and Project Management for industrial, airports, commercial and retail projects.</p>
+          <a href="{{ site.baseurl }}/businesses/intentional-development/" class="btn btn-secondary">Explore Services</a>
+        </div>
+      </div>
+
+      <!-- Intentional Landscaping -->
+      <div class="business-card">
+        <div class="business-image">
+          <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80" alt="Beautiful landscaped garden with greenery" loading="lazy">
+        </div>
+        <div class="business-content">
+          <span class="card-badge landscaping coming-soon">Coming Soon</span>
+          <h3>Intentional Landscaping</h3>
+          <p>Professional landscaping design and implementation.</p>
+          <a href="{{ site.baseurl }}/businesses/intentional-landscaping/" class="btn btn-outline">Register Interest</a>
         </div>
       </div>
     </div>
@@ -77,10 +94,10 @@ title: Home
   </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <div class="container">
     <h2>Get In Touch</h2>
     <p>Interested in learning more about our services? We'd love to hear from you.</p>
-    <a href="mailto:charles.donald@intentional.ae" class="btn btn-primary">Contact Us</a>
+    <a href="mailto:info@intentional.ae" class="btn btn-primary">Start a Conversation</a>
   </div>
 </section>
