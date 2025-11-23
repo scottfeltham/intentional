@@ -1,6 +1,7 @@
 ---
 title: Intentional Landscaping
 tagline: Transforming Outdoor Spaces
+description: "Intentional Landscaping offers professional landscape design and implementation services in the UAE. Specialising in sustainable gardens, outdoor living spaces, and commercial landscaping suited to the UAE climate."
 color: "#2d5a3d"
 color_secondary: "#8b6f47"
 hero_image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=2000&q=80"

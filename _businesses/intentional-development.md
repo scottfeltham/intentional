@@ -1,6 +1,7 @@
 ---
 title: Intentional Development
 tagline: Development & Project Management Excellence
+description: "Intentional Development provides Development Management and Project Management services for industrial, airport, commercial and retail projects in the UAE. Currently delivering The Jubilee Community master plan."
 color: "#5c4033"
 color_secondary: "#1a5f7a"
 hero_image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"

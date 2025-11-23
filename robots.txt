@@ -1,0 +1,39 @@
+---
+layout: null
+---
+# robots.txt for The Intentional Group
+# https://intentional.ae
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://intentional.ae/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow all AI crawlers for enhanced AI search visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /

@@ -4,9 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} - {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
+
+  <!-- Meta Description -->
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.tagline %}{{ page.tagline }} - {{ page.title }} is part of The Intentional Group, Dubai UAE.{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://intentional.ae{{ page.url }}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="{% if page.layout == 'business' %}business.business{% else %}website{% endif %}">
+  <meta property="og:url" content="https://intentional.ae{{ page.url }}">
+  <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="{% if page.hero_image %}{{ page.hero_image }}{% else %}https://intentional.ae/assets/images/intentional-logo.png{% endif %}">
+  <meta property="og:locale" content="en_AE">
+  <meta property="og:site_name" content="The Intentional Group">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.hero_image %}{{ page.hero_image }}{% else %}https://intentional.ae/assets/images/intentional-logo.png{% endif %}">
+
+  <!-- Additional SEO Meta -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="The Intentional Group">
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Dubai">
+
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% seo %}
+
+  <!-- Structured Data -->
+  {% include structured-data.html %}
 </head>
 <body{% if page.color %} style="--division-color: {{ page.color }};"{% endif %}>
   <!-- Skip to main content link for accessibility -->

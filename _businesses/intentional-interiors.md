@@ -1,6 +1,7 @@
 ---
 title: Intentional Interiors
 tagline: Transforming Spaces, Inspiring Excellence
+description: "Intentional Interiors delivers expert Design & Build fitout solutions for offices, hotels, F&B outlets, residences and educational spaces across the UAE. Complete project management from concept to handover."
 color: "#8b6f47"
 color_secondary: "#2c5f6f"
 hero_image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80"
