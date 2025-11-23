@@ -6,6 +6,11 @@ description: >-
 baseurl: "/intentional"
 url: "https://scottfeltham.github.io"
 
+# Google Analytics 4
+# Replace with your GA4 Measurement ID (format: G-XXXXXXXXXX)
+# To get your ID: https://analytics.google.com > Admin > Data Streams > Web > Measurement ID
+google_analytics: "G-XXXXXXXXXX"
+
 # Build settings
 markdown: kramdown
 theme: minima
