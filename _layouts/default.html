@@ -27,9 +27,9 @@
 
       <ul class="nav-menu" id="nav-menu">
         <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/businesses/intentional-development/' | relative_url }}" {% if page.url contains 'intentional-development' %}class="active"{% endif %}>Development</a></li>
         <li><a href="{{ '/businesses/intentional-interiors/' | relative_url }}" {% if page.url contains 'intentional-interiors' %}class="active"{% endif %}>Interiors</a></li>
         <li><a href="{{ '/businesses/intentional-education/' | relative_url }}" {% if page.url contains 'intentional-education' %}class="active"{% endif %}>Education</a></li>
-        <li><a href="{{ '/businesses/intentional-development/' | relative_url }}" {% if page.url contains 'intentional-development' %}class="active"{% endif %}>Development</a></li>
         <li><a href="{{ '/businesses/intentional-landscaping/' | relative_url }}" {% if page.url contains 'intentional-landscaping' %}class="active"{% endif %}>Landscaping</a></li>
         <li><a href="{{ '/' | relative_url }}#contact" {% if page.url contains 'contact' %}class="active"{% endif %}>Contact</a></li>
       </ul>
@@ -50,15 +50,16 @@
         <div class="footer-section">
           <h4>Our Businesses</h4>
           <ul>
+            <li><a href="{{ '/businesses/intentional-development/' | relative_url }}">Intentional Development</a></li>
             <li><a href="{{ '/businesses/intentional-interiors/' | relative_url }}">Intentional Interiors</a></li>
             <li><a href="{{ '/businesses/intentional-education/' | relative_url }}">Intentional Education</a></li>
-            <li><a href="{{ '/businesses/intentional-development/' | relative_url }}">Intentional Development</a></li>
             <li><a href="{{ '/businesses/intentional-landscaping/' | relative_url }}">Intentional Landscaping</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h4>Contact</h4>
           <p>Email: <a href="mailto:info@intentional.ae">info@intentional.ae</a></p>
+          <p>Phone: <a href="tel:+97143574846">+971 4 357 4846</a></p>
           <p>P.O. Box 72528 Dubai, UAE</p>
         </div>
       </div>

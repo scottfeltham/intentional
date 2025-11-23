@@ -42,6 +42,14 @@ Be among the first to experience our landscaping services. Contact us to:
 - Discuss your outdoor space vision
 - Request an early consultation
 
+## Photo Gallery
+
+<div class="photo-gallery">
+  <div class="gallery-placeholder">
+    <p>Gallery photos coming soon</p>
+  </div>
+</div>
+
 ---
 
 *Ready to transform your outdoor space? Contact our team to discuss your landscaping vision.*

@@ -41,20 +41,24 @@ Our integrated design and build approach streamlines the fitout process, ensurin
 - **Quality Craftsmanship**: Attention to detail in every element
 - **On-Time Delivery**: Reliable project management and execution
 - **Comprehensive Service**: End-to-end solutions from design to completion
-- **Educational Expertise**: Specialized knowledge in school environments
+- **Educational Expertise**: Specialised knowledge in school environments
 - **Professional Team**: Skilled craftsmen and experienced project managers
 
 ## Our Process
 
 1. **Consultation**: Understanding your needs and vision
-2. **Design**: Creating detailed plans and 3D visualizations
+2. **Design**: Creating detailed plans and 3D visualisations
 3. **Planning**: Project timeline and resource allocation
 4. **Execution**: Professional fitout with quality control
 5. **Handover**: Final inspection and documentation
 
-## Recent Projects
+## Photo Gallery
 
-We've completed numerous projects, ranging from small renovations to complete transformations. Our portfolio includes restaurants, hotels, modern corporate offices, residencies, innovative learning spaces, and specialized educational facilities.
+<div class="photo-gallery">
+  <div class="gallery-placeholder">
+    <p>Gallery photos coming soon</p>
+  </div>
+</div>
 
 ---
 

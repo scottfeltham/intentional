@@ -10,7 +10,7 @@ order: 2
 
 ## About Intentional Education
 
-Intentional Education is our growing division dedicated to advancing educational excellence across the UAE and beyond. We partner with schools, educational institutions, and organizations to develop innovative programs and services that empower both learners and educators.
+Intentional Education is our growing division dedicated to advancing educational excellence across the UAE and beyond. We partner with schools, educational institutions, and organisations to develop innovative programmes and services that empower both learners and educators.
 
 ## Our Services
 
@@ -21,10 +21,10 @@ We provide expert guidance to schools and institutions looking to enhance their 
 Our team works with educators to design engaging, standards-aligned curricula that meet the diverse needs of today's learners while preparing them for tomorrow's challenges.
 
 ### Professional Development
-We offer comprehensive training and development programs for educators, helping them stay current with the latest pedagogical approaches and educational technologies.
+We offer comprehensive training and development programmes for educators, helping them stay current with the latest pedagogical approaches and educational technologies.
 
 ### Learning Solutions
-From educational technology integration to specialized learning programs, we create customized solutions that address unique educational challenges and opportunities.
+From educational technology integration to specialised learning programmes, we create customised solutions that address unique educational challenges and opportunities.
 
 ## Our Approach
 
@@ -38,7 +38,7 @@ At Intentional Education, we believe that meaningful learning experiences are bu
 
 ## Services in Development
 
-### Teacher Training Programs
+### Teacher Training Programmes
 Comprehensive professional development courses designed to enhance teaching skills and pedagogical knowledge.
 
 ### Educational Technology Integration
@@ -57,10 +57,18 @@ We envision a future where every student has access to high-quality, engaging ed
 ## Why Partner With Us
 
 - **Educational Expertise**: Deep understanding of learning and development
-- **Customized Solutions**: Tailored approaches for unique needs
+- **Customised Solutions**: Tailored approaches for unique needs
 - **Collaborative Approach**: Working alongside educators and institutions
 - **Innovative Thinking**: Fresh perspectives on educational challenges
 - **Commitment to Excellence**: Dedicated to achieving the best outcomes
+
+## Photo Gallery
+
+<div class="photo-gallery">
+  <div class="gallery-placeholder">
+    <p>Gallery photos coming soon</p>
+  </div>
+</div>
 
 ---
 
