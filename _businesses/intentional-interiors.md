@@ -56,8 +56,61 @@ Our integrated design and build approach streamlines the fitout process, ensurin
 ## Photo Gallery
 
 <div class="photo-gallery">
-  <div class="gallery-placeholder">
-    <p>Gallery photos coming soon</p>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/ACUM6484.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/BMBP2032.JPEG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_1367.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_4823.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_6855.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8639.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8641.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8658.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8659.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8676.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8681.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8682.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8683.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8685.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8686.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8711.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/IMG_8712.JPG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/interiors/VRUI0898.JPEG' | relative_url }}" alt="Interior project" loading="lazy">
+    </div>
   </div>
 </div>
 

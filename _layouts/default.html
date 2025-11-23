@@ -127,6 +127,126 @@
     })();
   </script>
 
+  <!-- Gallery with Modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleries = document.querySelectorAll('.gallery-grid');
+
+      galleries.forEach(function(gallery) {
+        const items = gallery.querySelectorAll('.gallery-item');
+        const perPage = 4;
+        let currentPage = 0;
+        const totalPages = Math.ceil(items.length / perPage);
+
+        function showPage(page) {
+          currentPage = page;
+          const start = page * perPage;
+          const end = start + perPage;
+
+          items.forEach(function(item, index) {
+            item.style.display = (index >= start && index < end) ? 'block' : 'none';
+          });
+
+          // Update pagination controls
+          if (prevBtn) prevBtn.disabled = (page === 0);
+          if (nextBtn) nextBtn.disabled = (page >= totalPages - 1);
+          if (pageCounter) pageCounter.textContent = 'Page ' + (page + 1) + ' of ' + totalPages;
+        }
+
+        // Create pagination controls if needed
+        var prevBtn, nextBtn, pageCounter;
+        if (items.length > perPage) {
+          const paginationDiv = document.createElement('div');
+          paginationDiv.className = 'gallery-pagination';
+
+          prevBtn = document.createElement('button');
+          prevBtn.className = 'btn btn-secondary';
+          prevBtn.innerHTML = '&larr; Previous';
+          prevBtn.disabled = true;
+
+          pageCounter = document.createElement('span');
+          pageCounter.className = 'page-counter';
+
+          nextBtn = document.createElement('button');
+          nextBtn.className = 'btn btn-secondary';
+          nextBtn.innerHTML = 'Next &rarr;';
+
+          paginationDiv.appendChild(prevBtn);
+          paginationDiv.appendChild(pageCounter);
+          paginationDiv.appendChild(nextBtn);
+          gallery.parentNode.appendChild(paginationDiv);
+
+          prevBtn.addEventListener('click', function() {
+            if (currentPage > 0) showPage(currentPage - 1);
+          });
+
+          nextBtn.addEventListener('click', function() {
+            if (currentPage < totalPages - 1) showPage(currentPage + 1);
+          });
+        }
+
+        // Show first page
+        showPage(0);
+
+        // Create modal for image viewing
+        const modal = document.createElement('div');
+        modal.className = 'gallery-modal';
+        modal.innerHTML = '<div class="modal-content"><button class="modal-close">&times; Close</button><img src="" alt=""><div class="modal-nav"><button class="modal-prev">&larr; Previous</button><span class="modal-counter"></span><button class="modal-next">Next &rarr;</button></div></div>';
+        document.body.appendChild(modal);
+
+        const modalImg = modal.querySelector('img');
+        const modalClose = modal.querySelector('.modal-close');
+        const modalPrev = modal.querySelector('.modal-prev');
+        const modalNext = modal.querySelector('.modal-next');
+        const modalCounter = modal.querySelector('.modal-counter');
+        let currentIndex = 0;
+        const allImages = Array.from(items).map(item => item.querySelector('img').src);
+
+        function showImage(index) {
+          currentIndex = index;
+          modalImg.src = allImages[index];
+          modalCounter.textContent = (index + 1) + ' of ' + allImages.length;
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        items.forEach(function(item, index) {
+          item.style.cursor = 'pointer';
+          item.addEventListener('click', function() {
+            showImage(index);
+          });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) closeModal();
+        });
+
+        modalPrev.addEventListener('click', function(e) {
+          e.stopPropagation();
+          showImage((currentIndex - 1 + allImages.length) % allImages.length);
+        });
+
+        modalNext.addEventListener('click', function(e) {
+          e.stopPropagation();
+          showImage((currentIndex + 1) % allImages.length);
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (!modal.classList.contains('active')) return;
+          if (e.key === 'Escape') closeModal();
+          if (e.key === 'ArrowLeft') modalPrev.click();
+          if (e.key === 'ArrowRight') modalNext.click();
+        });
+      });
+    });
+  </script>
+
   <!-- TODO: Calendly Integration
        Uncomment and replace YOUR_CALENDLY_URL when ready to enable booking widget
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
