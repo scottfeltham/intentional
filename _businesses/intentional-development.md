@@ -75,8 +75,67 @@ As part of The Intentional Group, we bring:
 ## Photo Gallery
 
 <div class="photo-gallery">
-  <div class="gallery-placeholder">
-    <p>Gallery photos coming soon</p>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image1.jpeg' | relative_url }}" alt="Wafi Mall, Dubai - Aerial construction view" loading="lazy">
+      <span class="gallery-label">Wafi Mall, Dubai</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image2.jpg' | relative_url }}" alt="Wafi Mall, Dubai - Construction site" loading="lazy">
+      <span class="gallery-label">Wafi Mall, Dubai</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image3.jpeg' | relative_url }}" alt="Jaber Mall" loading="lazy">
+      <span class="gallery-label">Jaber Mall</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image4.jpg' | relative_url }}" alt="Sheikh Zayed Grand Mosque" loading="lazy">
+      <span class="gallery-label">Sheikh Zayed Grand Mosque</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image5.jpg' | relative_url }}" alt="Sheikh Zayed Desert Learning Centre" loading="lazy">
+      <span class="gallery-label">Sheikh Zayed Desert Learning Centre</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image6.jpg' | relative_url }}" alt="West Bay Complex including Four Seasons Hotel" loading="lazy">
+      <span class="gallery-label">West Bay Complex, Four Seasons Hotel</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image7.jpg' | relative_url }}" alt="Al Ain Wildlife Park and Resort" loading="lazy">
+      <span class="gallery-label">Al Ain Wildlife Park and Resort</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image8.jpg' | relative_url }}" alt="Wisdom Tree Residential Complex, Bangalore" loading="lazy">
+      <span class="gallery-label">Wisdom Tree Residential, Bangalore</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image9.jpeg' | relative_url }}" alt="Mubarak Al Kabeer Container Port" loading="lazy">
+      <span class="gallery-label">Mubarak Al Kabeer Container Port</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image10.jpeg' | relative_url }}" alt="Adma-Opco Adgas Headquarters, Abu Dhabi" loading="lazy">
+      <span class="gallery-label">Adma-Opco Adgas Headquarters</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image11.jpg' | relative_url }}" alt="Amiri Flight, Abu Dhabi" loading="lazy">
+      <span class="gallery-label">Amiri Flight, Abu Dhabi</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image12.jpg' | relative_url }}" alt="Four Seasons, Doha Spa" loading="lazy">
+      <span class="gallery-label">Four Seasons Spa, Doha</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image13.jpg' | relative_url }}" alt="Dubai Creek Marina Harbour Terminus" loading="lazy">
+      <span class="gallery-label">Dubai Creek Marina Harbour</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image14.jpg' | relative_url }}" alt="Etihad Museum" loading="lazy">
+      <span class="gallery-label">Etihad Museum</span>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ '/assets/images/gallery/development/image15.jpg' | relative_url }}" alt="Abu Dhabi Ship Building Shipyard" loading="lazy">
+      <span class="gallery-label">Abu Dhabi Ship Building Shipyard</span>
+    </div>
   </div>
 </div>
 

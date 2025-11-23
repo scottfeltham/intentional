@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - {{ site.title }}</title>
 
   <!-- Meta Description -->
   <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.tagline %}{{ page.tagline }} - {{ page.title }} is part of The Intentional Group, Dubai UAE.{% else %}{{ site.description }}{% endif %}">
@@ -52,7 +51,7 @@
       </a>
 
       <!-- Mobile menu toggle -->
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <button type="button" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -160,16 +159,18 @@
           paginationDiv.className = 'gallery-pagination';
 
           prevBtn = document.createElement('button');
+          prevBtn.type = 'button';
           prevBtn.className = 'btn btn-secondary';
-          prevBtn.innerHTML = '&larr; Previous';
+          prevBtn.innerHTML = '\u2190 Previous';
           prevBtn.disabled = true;
 
           pageCounter = document.createElement('span');
           pageCounter.className = 'page-counter';
 
           nextBtn = document.createElement('button');
+          nextBtn.type = 'button';
           nextBtn.className = 'btn btn-secondary';
-          nextBtn.innerHTML = 'Next &rarr;';
+          nextBtn.innerHTML = 'Next \u2192';
 
           paginationDiv.appendChild(prevBtn);
           paginationDiv.appendChild(pageCounter);
@@ -191,7 +192,7 @@
         // Create modal for image viewing
         const modal = document.createElement('div');
         modal.className = 'gallery-modal';
-        modal.innerHTML = '<div class="modal-content"><button class="modal-close">&times; Close</button><img src="" alt=""><div class="modal-nav"><button class="modal-prev">&larr; Previous</button><span class="modal-counter"></span><button class="modal-next">Next &rarr;</button></div></div>';
+        modal.innerHTML = '<div class="modal-content"><button type="button" class="modal-close">\u00D7 Close</button><img src="" alt=""><div class="modal-label"></div><div class="modal-nav"><button type="button" class="modal-prev">\u2190 Previous</button><span class="modal-counter"></span><button type="button" class="modal-next">Next \u2192</button></div></div>';
         document.body.appendChild(modal);
 
         const modalImg = modal.querySelector('img');
@@ -199,12 +200,19 @@
         const modalPrev = modal.querySelector('.modal-prev');
         const modalNext = modal.querySelector('.modal-next');
         const modalCounter = modal.querySelector('.modal-counter');
+        const modalLabel = modal.querySelector('.modal-label');
         let currentIndex = 0;
         const allImages = Array.from(items).map(item => item.querySelector('img').src);
+        const allLabels = Array.from(items).map(item => {
+          const label = item.querySelector('.gallery-label');
+          return label ? label.textContent : '';
+        });
 
         function showImage(index) {
           currentIndex = index;
           modalImg.src = allImages[index];
+          modalLabel.textContent = allLabels[index] || '';
+          modalLabel.style.display = allLabels[index] ? 'block' : 'none';
           modalCounter.textContent = (index + 1) + ' of ' + allImages.length;
           modal.classList.add('active');
           document.body.style.overflow = 'hidden';
