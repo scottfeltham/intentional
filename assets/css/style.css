@@ -506,19 +506,106 @@ body {
 .about {
   padding: var(--spacing-xl) var(--spacing-md);
   background-color: var(--white);
-  text-align: center;
 }
 
 .about h2 {
   font-size: 2.5rem;
   margin-bottom: var(--spacing-md);
   color: var(--dark-color);
+  text-align: center;
 }
 
-.about p {
-  font-size: 1.125rem;
-  max-width: 800px;
+.about-intro {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-intro .lead {
+  font-size: 1.25rem;
+  max-width: 900px;
   margin: 0 auto;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.about-values {
+  background: var(--light-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-values h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.values-list li {
+  flex: 0 1 calc(50% - var(--spacing-md));
+  min-width: 280px;
+  max-width: 450px;
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, rgba(44, 95, 111, 0.05) 0%, rgba(139, 111, 71, 0.05) 100%);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(44, 95, 111, 0.15);
+  border-left: 4px solid var(--primary-color);
+}
+
+.values-list li:nth-child(2) {
+  border-left-color: var(--secondary-color);
+  background: linear-gradient(135deg, rgba(139, 111, 71, 0.05) 0%, rgba(44, 95, 111, 0.05) 100%);
+}
+
+.values-list li:nth-child(3) {
+  border-left-color: var(--primary-color);
+}
+
+.values-list li:nth-child(4) {
+  border-left-color: var(--secondary-color);
+  background: linear-gradient(135deg, rgba(139, 111, 71, 0.05) 0%, rgba(44, 95, 111, 0.05) 100%);
+}
+
+.values-list li:nth-child(5) {
+  border-left-color: var(--primary-color);
+}
+
+.values-list li strong {
+  color: var(--dark-color);
+}
+
+.about-structure h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.structure-block {
+  margin-bottom: var(--spacing-lg);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.structure-block h4 {
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.25rem;
+}
+
+.structure-block p {
+  font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-color);
 }
