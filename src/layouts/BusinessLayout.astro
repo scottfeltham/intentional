@@ -29,6 +29,7 @@ const secondaryColor = colorSecondary || defaultSecondary;
 >
   <div
     class="business-hero"
+    transition:name="hero"
     style={`--division-color: ${divisionColor}; background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), ${divisionColor}cc), url('${heroImage}') center/cover;`}
   >
     <div class="container">
@@ -38,7 +39,7 @@ const secondaryColor = colorSecondary || defaultSecondary;
   </div>
 
   <!-- Breadcrumb Navigation -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <nav class="breadcrumb animate-on-scroll" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumb-list">
         <li><a href="/">Home</a></li>
@@ -47,14 +48,14 @@ const secondaryColor = colorSecondary || defaultSecondary;
     </div>
   </nav>
 
-  <article class="business-page" style={`--division-color: ${divisionColor};`}>
+  <article class="business-page animate-on-scroll" style={`--division-color: ${divisionColor};`}>
     <div class="container">
       <slot />
     </div>
   </article>
 
   <section
-    class="cta-section"
+    class="cta-section animate-on-scroll"
     style={`--division-color: ${divisionColor}; background: linear-gradient(135deg, ${divisionColor} 0%, ${secondaryColor} 100%);`}
   >
     <div class="container">

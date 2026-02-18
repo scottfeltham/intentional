@@ -6,7 +6,7 @@ const description = 'The Intentional Group delivers excellence in Property Devel
 ---
 
 <Layout title={title} description={description}>
-  <div class="hero" style="background: linear-gradient(135deg, rgba(44, 95, 111, 0.9), rgba(139, 111, 71, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80') center/cover;">
+  <div class="hero" transition:name="hero" style="background: linear-gradient(135deg, rgba(44, 95, 111, 0.9), rgba(139, 111, 71, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80') center/cover;">
     <div class="hero-content">
       <h1>The Intentional Group</h1>
       <p class="tagline">Building Excellence in Property Development, Design & Build Interiors, Education, and Landscaping</p>
@@ -16,10 +16,10 @@ const description = 'The Intentional Group delivers excellence in Property Devel
 
   <section class="businesses" id="main-content">
     <div class="container">
-      <h2 class="section-title">Our Business Areas</h2>
+      <h2 class="section-title animate-on-scroll">Our Business Areas</h2>
 
       <!-- Featured: Intentional Development -->
-      <div class="business-card-featured">
+      <div class="business-card-featured animate-on-scroll scale-up">
         <div class="featured-image">
           <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Modern development project with architectural excellence" loading="lazy">
         </div>
@@ -44,7 +44,7 @@ const description = 'The Intentional Group delivers excellence in Property Devel
       <!-- Other Divisions Grid -->
       <div class="business-cards-grid">
         <!-- Intentional Interiors -->
-        <div class="business-card">
+        <div class="business-card animate-on-scroll scale-up stagger-1">
           <div class="business-image">
             <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Professional office fitout with modern furniture" loading="lazy">
           </div>
@@ -57,7 +57,7 @@ const description = 'The Intentional Group delivers excellence in Property Devel
         </div>
 
         <!-- Intentional Education -->
-        <div class="business-card">
+        <div class="business-card animate-on-scroll scale-up stagger-2">
           <div class="business-image">
             <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Students engaged in collaborative learning" loading="lazy">
           </div>
@@ -70,7 +70,7 @@ const description = 'The Intentional Group delivers excellence in Property Devel
         </div>
 
         <!-- Intentional Landscaping -->
-        <div class="business-card">
+        <div class="business-card animate-on-scroll scale-up stagger-3">
           <div class="business-image">
             <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80" alt="Beautiful landscaped garden with greenery" loading="lazy">
           </div>
@@ -87,9 +87,9 @@ const description = 'The Intentional Group delivers excellence in Property Devel
 
   <section class="about" id="about">
     <div class="container">
-      <h2>About The Intentional Group</h2>
+      <h2 class="animate-on-scroll">About The Intentional Group</h2>
 
-      <div class="about-intro">
+      <div class="about-intro animate-on-scroll">
         <p class="lead">
           The Intentional Group grew from a simple belief: that business success and doing the right thing
           should go hand in hand. What began as Intentional Development has evolved into a family of
@@ -97,7 +97,7 @@ const description = 'The Intentional Group delivers excellence in Property Devel
         </p>
       </div>
 
-      <div class="about-values">
+      <div class="about-values animate-on-scroll">
         <h3>Our Values</h3>
         <ul class="values-list">
           <li><strong>Excellence</strong> - Striving for the highest standards in everything we do</li>
@@ -108,7 +108,7 @@ const description = 'The Intentional Group delivers excellence in Property Devel
         </ul>
       </div>
 
-      <div class="about-structure">
+      <div class="about-structure animate-on-scroll">
         <h3>How We Work</h3>
 
         <div class="structure-block">
@@ -142,7 +142,7 @@ const description = 'The Intentional Group delivers excellence in Property Devel
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <section class="contact animate-on-scroll" id="contact">
     <div class="container">
       <h2>Get In Touch</h2>
       <p>Interested in learning more about our services? We'd love to hear from you.</p>

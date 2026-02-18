@@ -1,0 +1,92 @@
+/* ============================================
+   View Transition Timing Overrides
+   ============================================ */
+
+::view-transition-old(root) {
+  animation-duration: 0.2s;
+}
+
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}
+
+::view-transition-old(hero) {
+  animation-duration: 0.35s;
+}
+
+::view-transition-new(hero) {
+  animation-duration: 0.35s;
+}
+
+/* ============================================
+   Scroll-triggered Entrance Animations
+   ============================================ */
+
+/* Hidden state only applies once JS has set up the observer */
+.js-animations .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.js-animations .animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Direction variants */
+.js-animations .animate-on-scroll.from-left {
+  transform: translateX(-24px);
+}
+
+.js-animations .animate-on-scroll.from-left.is-visible {
+  transform: translateX(0);
+}
+
+.js-animations .animate-on-scroll.from-right {
+  transform: translateX(24px);
+}
+
+.js-animations .animate-on-scroll.from-right.is-visible {
+  transform: translateX(0);
+}
+
+.js-animations .animate-on-scroll.scale-up {
+  transform: scale(0.95) translateY(24px);
+}
+
+.js-animations .animate-on-scroll.scale-up.is-visible {
+  transform: scale(1) translateY(0);
+}
+
+/* Stagger delays for grid cards */
+.animate-on-scroll.stagger-1 {
+  transition-delay: 0.1s;
+}
+
+.animate-on-scroll.stagger-2 {
+  transition-delay: 0.2s;
+}
+
+.animate-on-scroll.stagger-3 {
+  transition-delay: 0.3s;
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-old(hero),
+  ::view-transition-new(hero) {
+    animation-duration: 0s;
+  }
+
+  .js-animations .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
