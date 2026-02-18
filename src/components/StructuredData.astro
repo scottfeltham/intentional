@@ -1,0 +1,125 @@
+---
+interface Props {
+  isBusinessPage?: boolean;
+  title?: string;
+  tagline?: string;
+  email?: string;
+  url?: string;
+  isHome?: boolean;
+}
+
+const { isBusinessPage = false, title, tagline, email, url, isHome = false } = Astro.props;
+const siteEmail = 'info@intentional.ae';
+
+const serviceTypes: Record<string, { serviceType: string[]; knowsAbout: string[] }> = {
+  'Intentional Development': {
+    serviceType: ['Development Management', 'Project Management', 'Feasibility Studies', 'Master Planning'],
+    knowsAbout: ['Property Development', 'Industrial Projects', 'Airport Development', 'Commercial Development', 'Retail Development'],
+  },
+  'Intentional Interiors': {
+    serviceType: ['Interior Design', 'Fitout Services', 'Design & Build', 'Project Management'],
+    knowsAbout: ['Office Fitout', 'Hotel Interiors', 'F&B Design', 'Residential Interiors', 'Educational Spaces'],
+  },
+  'Intentional Education': {
+    serviceType: ['Educational Consulting', 'Curriculum Development', 'Professional Development', 'Learning Solutions'],
+    knowsAbout: ['Educational Excellence', 'Teacher Training', 'Curriculum Design', 'Educational Technology'],
+  },
+  'Intentional Landscaping': {
+    serviceType: ['Landscape Design', 'Garden Planning', 'Outdoor Living Spaces', 'Commercial Landscaping'],
+    knowsAbout: ['Landscaping', 'Garden Design', 'Hardscaping', 'Sustainable Landscaping'],
+  },
+};
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://intentional.ae/#organization',
+  name: 'The Intentional Group',
+  alternateName: 'Intentional Group',
+  url: 'https://intentional.ae',
+  logo: 'https://intentional.ae/assets/images/intentional-logo.png',
+  description: 'The Intentional Group delivers excellence in Property Development, Design & Build Interiors, Education, and Landscaping across the UAE and beyond.',
+  email: 'info@intentional.ae',
+  telephone: '+971-4-357-4846',
+  address: {
+    '@type': 'PostalAddress',
+    postOfficeBoxNumber: '72528',
+    addressLocality: 'Dubai',
+    addressCountry: 'AE',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United Arab Emirates',
+  },
+  sameAs: [],
+  subOrganization: [
+    { '@type': 'Organization', '@id': 'https://intentional.ae/businesses/intentional-development/#organization', name: 'Intentional Development' },
+    { '@type': 'Organization', '@id': 'https://intentional.ae/businesses/intentional-interiors/#organization', name: 'Intentional Interiors' },
+    { '@type': 'Organization', '@id': 'https://intentional.ae/businesses/intentional-education/#organization', name: 'Intentional Education' },
+    { '@type': 'Organization', '@id': 'https://intentional.ae/businesses/intentional-landscaping/#organization', name: 'Intentional Landscaping' },
+  ],
+};
+
+const businessSchema = isBusinessPage && title ? {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `https://intentional.ae${url}#organization`,
+  name: title,
+  description: tagline,
+  url: `https://intentional.ae${url}`,
+  email: email || siteEmail,
+  telephone: '+971-4-357-4846',
+  address: {
+    '@type': 'PostalAddress',
+    postOfficeBoxNumber: '72528',
+    addressLocality: 'Dubai',
+    addressCountry: 'AE',
+  },
+  parentOrganization: {
+    '@type': 'Organization',
+    '@id': 'https://intentional.ae/#organization',
+    name: 'The Intentional Group',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United Arab Emirates',
+  },
+  ...(title && serviceTypes[title] ? serviceTypes[title] : {}),
+} : null;
+
+const breadcrumbSchema = isBusinessPage ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://intentional.ae' },
+    { '@type': 'ListItem', position: 2, name: title, item: `https://intentional.ae${url}` },
+  ],
+} : null;
+
+const websiteSchema = isHome ? {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'The Intentional Group',
+  url: 'https://intentional.ae',
+  description: 'Building Excellence in Property Development, Design & Build Interiors, Education, and Landscaping across the UAE.',
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://intentional.ae/#organization',
+  },
+} : null;
+---
+
+<!-- Organization Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+
+{businessSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+)}
+
+{breadcrumbSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+)}
+
+{websiteSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+)}

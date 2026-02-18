@@ -1,29 +1,67 @@
+---
+import '../styles/style.css';
+import StructuredData from '../components/StructuredData.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  tagline?: string;
+  color?: string;
+  heroImage?: string;
+  isBusinessPage?: boolean;
+  email?: string;
+}
+
+const {
+  title,
+  description,
+  tagline,
+  color,
+  heroImage,
+  isBusinessPage = false,
+  email,
+} = Astro.props;
+
+const siteTitle = 'Intentional Group';
+const siteDescription = 'The Intentional Group - Building Excellence in Property Development, Design & Build Interiors, Education, and Landscaping';
+const pathname = Astro.url.pathname;
+
+const metaDescription = description || (tagline ? `${tagline} - ${title} is part of The Intentional Group, Dubai UAE.` : siteDescription);
+const ogImage = heroImage || 'https://intentional.ae/assets/images/intentional-logo.png';
+const ogDescription = description || tagline || siteDescription;
+const ogType = isBusinessPage ? 'business.business' : 'website';
+const currentYear = new Date().getFullYear();
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>{title} - {siteTitle}</title>
+
   <!-- Meta Description -->
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.tagline %}{{ page.tagline }} - {{ page.title }} is part of The Intentional Group, Dubai UAE.{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content={metaDescription}>
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://intentional.ae{{ page.url }}">
+  <link rel="canonical" href={`https://intentional.ae${pathname}`}>
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="{% if page.layout == 'business' %}business.business{% else %}website{% endif %}">
-  <meta property="og:url" content="https://intentional.ae{{ page.url }}">
-  <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="{% if page.hero_image %}{{ page.hero_image }}{% else %}https://intentional.ae/assets/images/intentional-logo.png{% endif %}">
+  <meta property="og:type" content={ogType}>
+  <meta property="og:url" content={`https://intentional.ae${pathname}`}>
+  <meta property="og:title" content={`${title} - ${siteTitle}`}>
+  <meta property="og:description" content={ogDescription}>
+  <meta property="og:image" content={ogImage}>
   <meta property="og:locale" content="en_AE">
   <meta property="og:site_name" content="The Intentional Group">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="{% if page.hero_image %}{{ page.hero_image }}{% else %}https://intentional.ae/assets/images/intentional-logo.png{% endif %}">
+  <meta name="twitter:title" content={`${title} - ${siteTitle}`}>
+  <meta name="twitter:description" content={ogDescription}>
+  <meta name="twitter:image" content={ogImage}>
 
   <!-- Additional SEO Meta -->
   <meta name="robots" content="index, follow">
@@ -31,23 +69,27 @@
   <meta name="geo.region" content="AE-DU">
   <meta name="geo.placename" content="Dubai">
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  {% seo %}
-
   <!-- Structured Data -->
-  {% include structured-data.html %}
+  <StructuredData
+    isBusinessPage={isBusinessPage}
+    title={title}
+    tagline={tagline}
+    email={email}
+    url={pathname}
+    isHome={pathname === '/'}
+  />
 
   <!-- Google Analytics -->
-  {% include google-analytics.html %}
+  <GoogleAnalytics />
 </head>
-<body{% if page.color %} style="--division-color: {{ page.color }};"{% endif %}>
+<body style={color ? `--division-color: ${color};` : undefined}>
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header">
     <nav class="container">
-      <a href="{{ '/' | relative_url }}" class="logo">
-        <img src="{{ '/assets/images/intentional-logo.png' | relative_url }}" alt="The Intentional Group" class="logo-img">
+      <a href="/" class="logo">
+        <img src="/assets/images/intentional-logo.png" alt="The Intentional Group" class="logo-img">
       </a>
 
       <!-- Mobile menu toggle -->
@@ -58,18 +100,18 @@
       </button>
 
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
-        <li><a href="{{ '/businesses/intentional-development/' | relative_url }}" {% if page.url contains 'intentional-development' %}class="active"{% endif %}>Development</a></li>
-        <li><a href="{{ '/businesses/intentional-interiors/' | relative_url }}" {% if page.url contains 'intentional-interiors' %}class="active"{% endif %}>Interiors</a></li>
-        <li><a href="{{ '/businesses/intentional-education/' | relative_url }}" {% if page.url contains 'intentional-education' %}class="active"{% endif %}>Education</a></li>
-        <li><a href="{{ '/businesses/intentional-landscaping/' | relative_url }}" {% if page.url contains 'intentional-landscaping' %}class="active"{% endif %}>Landscaping</a></li>
-        <li><a href="{{ '/' | relative_url }}#contact" {% if page.url contains 'contact' %}class="active"{% endif %}>Contact</a></li>
+        <li><a href="/" class={pathname === '/' ? 'active' : ''}>Home</a></li>
+        <li><a href="/businesses/intentional-development/" class={pathname.includes('intentional-development') ? 'active' : ''}>Development</a></li>
+        <li><a href="/businesses/intentional-interiors/" class={pathname.includes('intentional-interiors') ? 'active' : ''}>Interiors</a></li>
+        <li><a href="/businesses/intentional-education/" class={pathname.includes('intentional-education') ? 'active' : ''}>Education</a></li>
+        <li><a href="/businesses/intentional-landscaping/" class={pathname.includes('intentional-landscaping') ? 'active' : ''}>Landscaping</a></li>
+        <li><a href="/#contact" class={pathname.includes('contact') ? 'active' : ''}>Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main{% unless page.url == '/' %} id="main-content"{% endunless %}>
-    {{ content }}
+  <main id={pathname !== '/' ? 'main-content' : undefined}>
+    <slot />
   </main>
 
   <footer class="site-footer">
@@ -82,10 +124,10 @@
         <div class="footer-section">
           <h4>Our Businesses</h4>
           <ul>
-            <li><a href="{{ '/businesses/intentional-development/' | relative_url }}">Intentional Development</a></li>
-            <li><a href="{{ '/businesses/intentional-interiors/' | relative_url }}">Intentional Interiors</a></li>
-            <li><a href="{{ '/businesses/intentional-education/' | relative_url }}">Intentional Education</a></li>
-            <li><a href="{{ '/businesses/intentional-landscaping/' | relative_url }}">Intentional Landscaping</a></li>
+            <li><a href="/businesses/intentional-development/">Intentional Development</a></li>
+            <li><a href="/businesses/intentional-interiors/">Intentional Interiors</a></li>
+            <li><a href="/businesses/intentional-education/">Intentional Education</a></li>
+            <li><a href="/businesses/intentional-landscaping/">Intentional Landscaping</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -96,13 +138,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; {{ 'now' | date: "%Y" }} The Intentional Group. All rights reserved.</p>
+        <p>&copy; {currentYear} The Intentional Group. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- Mobile menu script -->
-  <script>
+  <script is:inline>
     (function() {
       const toggle = document.querySelector('.mobile-menu-toggle');
       const menu = document.querySelector('.nav-menu');
@@ -114,7 +156,6 @@
           toggle.setAttribute('aria-expanded', isOpen);
         });
 
-        // Close menu when clicking a link
         menu.querySelectorAll('a').forEach(function(link) {
           link.addEventListener('click', function() {
             menu.classList.remove('is-open');
@@ -127,7 +168,7 @@
   </script>
 
   <!-- Gallery with Modal -->
-  <script>
+  <script is:inline>
     document.addEventListener('DOMContentLoaded', function() {
       const galleries = document.querySelectorAll('.gallery-grid');
 
@@ -146,13 +187,11 @@
             item.style.display = (index >= start && index < end) ? 'block' : 'none';
           });
 
-          // Update pagination controls
           if (prevBtn) prevBtn.disabled = (page === 0);
           if (nextBtn) nextBtn.disabled = (page >= totalPages - 1);
           if (pageCounter) pageCounter.textContent = 'Page ' + (page + 1) + ' of ' + totalPages;
         }
 
-        // Create pagination controls if needed
         var prevBtn, nextBtn, pageCounter;
         if (items.length > perPage) {
           const paginationDiv = document.createElement('div');
@@ -186,10 +225,8 @@
           });
         }
 
-        // Show first page
         showPage(0);
 
-        // Create modal for image viewing
         const modal = document.createElement('div');
         modal.className = 'gallery-modal';
         modal.innerHTML = '<div class="modal-content"><button type="button" class="modal-close">\u00D7 Close</button><img src="" alt=""><div class="modal-label"></div><div class="modal-nav"><button type="button" class="modal-prev">\u2190 Previous</button><span class="modal-counter"></span><button type="button" class="modal-next">Next \u2192</button></div></div>';
@@ -254,21 +291,5 @@
       });
     });
   </script>
-
-  <!-- TODO: Calendly Integration
-       Uncomment and replace YOUR_CALENDLY_URL when ready to enable booking widget
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
-    window.addEventListener('load', function() {
-      Calendly.initBadgeWidget({
-        url: 'https://calendly.com/YOUR_CALENDLY_URL',
-        text: 'Book a Consultation',
-        color: '#5d7187',
-        textColor: '#ffffff'
-      });
-    });
-  </script>
-  -->
 </body>
 </html>

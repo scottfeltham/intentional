@@ -1,6 +1,3 @@
----
-layout: null
----
 # robots.txt for The Intentional Group
 # https://intentional.ae
 
@@ -8,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://intentional.ae/sitemap.xml
+Sitemap: https://intentional.ae/sitemap-index.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

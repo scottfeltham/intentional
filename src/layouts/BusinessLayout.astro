@@ -1,0 +1,66 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  tagline: string;
+  description: string;
+  color: string;
+  colorSecondary?: string;
+  heroImage: string;
+  email: string;
+}
+
+const { title, tagline, description, color, colorSecondary, heroImage, email } = Astro.props;
+const defaultColor = '#8b6f47';
+const defaultSecondary = '#2c5f6f';
+const divisionColor = color || defaultColor;
+const secondaryColor = colorSecondary || defaultSecondary;
+---
+
+<Layout
+  title={title}
+  description={description}
+  tagline={tagline}
+  color={divisionColor}
+  heroImage={heroImage}
+  isBusinessPage={true}
+  email={email}
+>
+  <div
+    class="business-hero"
+    style={`--division-color: ${divisionColor}; background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), ${divisionColor}cc), url('${heroImage}') center/cover;`}
+  >
+    <div class="container">
+      <h1>{title}</h1>
+      <p class="business-tagline">{tagline}</p>
+    </div>
+  </div>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">{title}</li>
+      </ol>
+    </div>
+  </nav>
+
+  <article class="business-page" style={`--division-color: ${divisionColor};`}>
+    <div class="container">
+      <slot />
+    </div>
+  </article>
+
+  <section
+    class="cta-section"
+    style={`--division-color: ${divisionColor}; background: linear-gradient(135deg, ${divisionColor} 0%, ${secondaryColor} 100%);`}
+  >
+    <div class="container">
+      <h2>Ready to Work With Us?</h2>
+      <p>Get in touch to discuss your project</p>
+      <a href={`mailto:${email || 'info@intentional.ae'}`} class="btn btn-light">Contact {title}</a>
+    </div>
+  </section>
+</Layout>

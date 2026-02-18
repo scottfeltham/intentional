@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BusinessLayout from '../../layouts/BusinessLayout.astro';
+
+export async function getStaticPaths() {
+  const businesses = await getCollection('businesses');
+  return businesses.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BusinessLayout
+  title={entry.data.title}
+  tagline={entry.data.tagline}
+  description={entry.data.description}
+  color={entry.data.color}
+  colorSecondary={entry.data.color_secondary}
+  heroImage={entry.data.hero_image}
+  email={entry.data.email}
+>
+  <Content />
+</BusinessLayout>

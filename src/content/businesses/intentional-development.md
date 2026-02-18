@@ -13,28 +13,21 @@ order: 3
 
 Intentional Development brings vast experience in delivering Development Management and Project Management for any type of project. We provide comprehensive oversight from concept through completion, ensuring projects are delivered on time, within budget, and to the highest standards.
 
-<div class="flagship-card" markdown="1">
-
-## The Jubilee Community
-
-Intentional Development is currently preparing the Feasibility/Business Case Study and Master Plan for **The Jubilee Community**, a new village in the UAE.
-
-### Vision Statement
-
-The Jubilee Community envisions a flourishing, intergenerational village where every person - from newborns to elders - is honoured with dignity, respect, and a true sense of belonging.
-
-Set within a peaceful and nurturing environment, this community welcomes people of all nationalities, faiths, and walks of life, providing each resident the opportunity to thrive.
-
-The community will feature:
-
-- **Early Childhood Centres** celebrating and supporting new life from the start
-- **World-Class Education** empowering children to become compassionate, capable global citizens
-- **Inclusive Spiritual Spaces** hosting meaningful ceremonies and fostering connection across traditions
-- **Innovation Hubs** nurturing entrepreneurs while experienced professionals lead ventures serving people and planet
-- **Retirement & Care Facilities** ensuring comfort, community, and dignity at every stage of life
-
-This is more than a vision for a neighbourhood - it is a blueprint for sustainable human flourishing, offering long-term well-being, strong social cohesion, and investable economic resilience.
-
+<div class="flagship-card">
+  <h2>The Jubilee Community</h2>
+  <p>Intentional Development is currently preparing the Feasibility/Business Case Study and Master Plan for <strong>The Jubilee Community</strong>, a new village in the UAE.</p>
+  <h3>Vision Statement</h3>
+  <p>The Jubilee Community envisions a flourishing, intergenerational village where every person - from newborns to elders - is honoured with dignity, respect, and a true sense of belonging.</p>
+  <p>Set within a peaceful and nurturing environment, this community welcomes people of all nationalities, faiths, and walks of life, providing each resident the opportunity to thrive.</p>
+  <p>The community will feature:</p>
+  <ul>
+    <li><strong>Early Childhood Centres</strong> celebrating and supporting new life from the start</li>
+    <li><strong>World-Class Education</strong> empowering children to become compassionate, capable global citizens</li>
+    <li><strong>Inclusive Spiritual Spaces</strong> hosting meaningful ceremonies and fostering connection across traditions</li>
+    <li><strong>Innovation Hubs</strong> nurturing entrepreneurs while experienced professionals lead ventures serving people and planet</li>
+    <li><strong>Retirement & Care Facilities</strong> ensuring comfort, community, and dignity at every stage of life</li>
+  </ul>
+  <p>This is more than a vision for a neighbourhood - it is a blueprint for sustainable human flourishing, offering long-term well-being, strong social cohesion, and investable economic resilience.</p>
 </div>
 
 ## Our Experience
@@ -77,63 +70,63 @@ As part of The Intentional Group, we bring:
 <div class="photo-gallery">
   <div class="gallery-grid">
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image1.jpeg' | relative_url }}" alt="Wafi Mall, Dubai - Aerial construction view" loading="lazy">
+      <img src="/assets/images/gallery/development/image1.jpeg" alt="Wafi Mall, Dubai - Aerial construction view" loading="lazy">
       <span class="gallery-label">Wafi Mall, Dubai</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image2.jpg' | relative_url }}" alt="Wafi Mall, Dubai - Construction site" loading="lazy">
+      <img src="/assets/images/gallery/development/image2.jpg" alt="Wafi Mall, Dubai - Construction site" loading="lazy">
       <span class="gallery-label">Wafi Mall, Dubai</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image3.jpeg' | relative_url }}" alt="Jaber Mall" loading="lazy">
+      <img src="/assets/images/gallery/development/image3.jpeg" alt="Jaber Mall" loading="lazy">
       <span class="gallery-label">Jaber Mall</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image4.jpg' | relative_url }}" alt="Sheikh Zayed Grand Mosque" loading="lazy">
+      <img src="/assets/images/gallery/development/image4.jpg" alt="Sheikh Zayed Grand Mosque" loading="lazy">
       <span class="gallery-label">Sheikh Zayed Grand Mosque</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image5.jpg' | relative_url }}" alt="Sheikh Zayed Desert Learning Centre" loading="lazy">
+      <img src="/assets/images/gallery/development/image5.jpg" alt="Sheikh Zayed Desert Learning Centre" loading="lazy">
       <span class="gallery-label">Sheikh Zayed Desert Learning Centre</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image6.jpg' | relative_url }}" alt="West Bay Complex including Four Seasons Hotel" loading="lazy">
+      <img src="/assets/images/gallery/development/image6.jpg" alt="West Bay Complex including Four Seasons Hotel" loading="lazy">
       <span class="gallery-label">West Bay Complex, Four Seasons Hotel</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image7.jpg' | relative_url }}" alt="Al Ain Wildlife Park and Resort" loading="lazy">
+      <img src="/assets/images/gallery/development/image7.jpg" alt="Al Ain Wildlife Park and Resort" loading="lazy">
       <span class="gallery-label">Al Ain Wildlife Park and Resort</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image8.jpg' | relative_url }}" alt="Wisdom Tree Residential Complex, Bangalore" loading="lazy">
+      <img src="/assets/images/gallery/development/image8.jpg" alt="Wisdom Tree Residential Complex, Bangalore" loading="lazy">
       <span class="gallery-label">Wisdom Tree Residential, Bangalore</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image9.jpeg' | relative_url }}" alt="Mubarak Al Kabeer Container Port" loading="lazy">
+      <img src="/assets/images/gallery/development/image9.jpeg" alt="Mubarak Al Kabeer Container Port" loading="lazy">
       <span class="gallery-label">Mubarak Al Kabeer Container Port</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image10.jpeg' | relative_url }}" alt="Adma-Opco Adgas Headquarters, Abu Dhabi" loading="lazy">
+      <img src="/assets/images/gallery/development/image10.jpeg" alt="Adma-Opco Adgas Headquarters, Abu Dhabi" loading="lazy">
       <span class="gallery-label">Adma-Opco Adgas Headquarters</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image11.jpg' | relative_url }}" alt="Amiri Flight, Abu Dhabi" loading="lazy">
+      <img src="/assets/images/gallery/development/image11.jpg" alt="Amiri Flight, Abu Dhabi" loading="lazy">
       <span class="gallery-label">Amiri Flight, Abu Dhabi</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image12.jpg' | relative_url }}" alt="Four Seasons, Doha Spa" loading="lazy">
+      <img src="/assets/images/gallery/development/image12.jpg" alt="Four Seasons, Doha Spa" loading="lazy">
       <span class="gallery-label">Four Seasons Spa, Doha</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image13.jpg' | relative_url }}" alt="Dubai Creek Marina Harbour Terminus" loading="lazy">
+      <img src="/assets/images/gallery/development/image13.jpg" alt="Dubai Creek Marina Harbour Terminus" loading="lazy">
       <span class="gallery-label">Dubai Creek Marina Harbour</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image14.jpg' | relative_url }}" alt="Etihad Museum" loading="lazy">
+      <img src="/assets/images/gallery/development/image14.jpg" alt="Etihad Museum" loading="lazy">
       <span class="gallery-label">Etihad Museum</span>
     </div>
     <div class="gallery-item">
-      <img src="{{ '/assets/images/gallery/development/image15.jpg' | relative_url }}" alt="Abu Dhabi Ship Building Shipyard" loading="lazy">
+      <img src="/assets/images/gallery/development/image15.jpg" alt="Abu Dhabi Ship Building Shipyard" loading="lazy">
       <span class="gallery-label">Abu Dhabi Ship Building Shipyard</span>
     </div>
   </div>

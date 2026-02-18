@@ -1,11 +1,20 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-.bundle/
-vendor/
-*.gem
-Gemfile.lock
+# Astro
+dist/
+.astro/
+
+# Node
+node_modules/
+
+# OS
 .DS_Store
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Forge
 .forge/
-_config.dev.yml
