@@ -36,7 +36,13 @@ const description = 'A family-friendly festival celebrating inclusion for People
   </div>
 
   <script is:inline>
-    document.addEventListener('astro:page-load', function() {
+    (function() {
+      // Clear any previous countdown interval on re-visit
+      if (window._countdownInterval) {
+        clearInterval(window._countdownInterval);
+        window._countdownInterval = null;
+      }
+
       var target = new Date('2026-12-03T12:00:00+04:00').getTime();
       var days = document.getElementById('cd-days');
       var hours = document.getElementById('cd-hours');
@@ -60,8 +66,8 @@ const description = 'A family-friendly festival celebrating inclusion for People
       }
 
       update();
-      setInterval(update, 1000);
-    });
+      window._countdownInterval = setInterval(update, 1000);
+    })();
   </script>
 
   <section class="event-section" id="main-content">
