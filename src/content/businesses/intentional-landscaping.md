@@ -1,7 +1,7 @@
 ---
 title: Intentional Landscaping
 tagline: Transforming Outdoor Spaces
-description: "Intentional Landscaping offers professional landscape design and implementation services in the UAE. Specialising in sustainable gardens, outdoor living spaces, and commercial landscaping suited to the UAE climate."
+description: "Intentional Landscaping delivers professional landscaping, tree surgery, and outdoor living solutions across Dubai through our specialist companies — Upgraded Landscaping and DXB Tree Specialists."
 color: "#2d5a3d"
 color_secondary: "#8b6f47"
 hero_image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=2000&q=80"
@@ -9,48 +9,36 @@ email: info@intentional.ae
 order: 4
 ---
 
-## Coming Soon
+## Our Landscaping Companies
 
-Intentional Landscaping is our professional landscaping design and implementation division. We're bringing the same dedication to excellence that defines The Intentional Group to outdoor spaces across the UAE.
+Intentional Landscaping operates through two specialist companies, each bringing focused expertise to Dubai's outdoor spaces.
 
-Our team is developing comprehensive landscaping solutions that will complement and extend the quality environments we create indoors through our Interiors division.
-
-## Our Vision
-
-We're preparing to offer complete outdoor transformation services:
-
-- **Landscape Design** - Creative concepts that enhance your property's appeal
-- **Garden Planning** - Sustainable, beautiful gardens suited to the UAE climate
-- **Outdoor Living Spaces** - Extended living areas for relaxation and entertainment
-- **Commercial Landscaping** - Professional grounds that make lasting impressions
-- **Residential Gardens** - Personal outdoor sanctuaries tailored to your lifestyle
-- **Hardscaping** - Patios, walkways, and structural elements
-
-## The Intentional Approach
-
-What sets us apart:
-
-- Integration with our Interiors division for seamless indoor-outdoor design
-- Understanding of UAE climate and sustainable landscaping practices
-- Focus on low-maintenance, high-impact solutions
-- Commitment to quality materials and expert installation
-
-## Register Your Interest
-
-Be among the first to experience our landscaping services. Contact us to:
-
-- Register for launch updates
-- Discuss your outdoor space vision
-- Request an early consultation
-
-## Photo Gallery
-
-<div class="photo-gallery">
-  <div class="gallery-placeholder">
-    <p>Gallery photos coming soon</p>
+<div class="subsidiary-cards">
+  <div class="subsidiary-card animate-on-scroll scale-up stagger-1">
+    <img src="/assets/images/dxb-tree-specialists.png" alt="DXB Tree Specialists website — professional tree surgery in Dubai" loading="lazy">
+    <div class="subsidiary-card-content">
+      <h3>DXB Tree Specialists</h3>
+      <p>Professional tree surgery and care across Dubai with over 10 years of experience. Fully insured tree surgeons available 24/7 for residential and commercial properties.</p>
+      <p>Services include tree removal, hedge trimming, crown reduction, pollarding, pruning, and complete waste removal.</p>
+      <a href="https://dxbtreespecialists.ae" target="_blank" rel="noopener" class="btn btn-secondary">Visit Website &rarr;</a>
+    </div>
+  </div>
+  <div class="subsidiary-card animate-on-scroll scale-up stagger-2">
+    <img src="/assets/images/upgraded-landscaping.png" alt="Upgraded Landscaping website — premium landscaping services in Dubai" loading="lazy">
+    <div class="subsidiary-card-content">
+      <h3>Upgraded Landscaping</h3>
+      <p>Bringing European precision and standards to Dubai's premium villas. From custom design and hardscaping to sustainable maintenance, we create outdoor sanctuaries you can trust.</p>
+      <p>Services include luxury pool surrounds, modern walkways, outdoor living areas, ambient lighting, garden maintenance, and complete landscaping projects.</p>
+      <a href="https://upgradedlandscaping.ae" target="_blank" rel="noopener" class="btn btn-secondary">Visit Website &rarr;</a>
+    </div>
   </div>
 </div>
 
----
+## The Intentional Approach
 
-*Ready to transform your outdoor space? Contact our team to discuss your landscaping vision.*
+What sets our landscaping companies apart:
+
+- **European Standards** — Professional qualifications, transparent pricing, and reliable project delivery
+- **Specialist Expertise** — Qualified arborists and landscape designers with international experience
+- **Full Service** — From design and build through to ongoing maintenance
+- **Dubai Focus** — Serving premium communities including Dubai Hills Estate, Arabian Ranches, Emirates Hills, and Palm Jumeirah
