@@ -1,91 +1,88 @@
 # Intentional Group Website
 
-This is the Jekyll-based website for The Intentional Group, featuring two business divisions:
-- **Intentional Fitout** - Established fitout services for offices and schools
-- **Intentional Education** - Growing educational consulting and services division
+The website for The Intentional Group, built with [Astro](https://astro.build) and hosted on GitHub Pages.
+
+## Business Divisions
+
+- **Intentional Development** - Development management and project management
+- **Intentional Interiors** - Design and build fitout services
+- **Intentional Education** - Educational programmes and consulting
+- **Intentional Landscaping** - Professional landscaping via DXB Tree Specialists and Upgraded Landscaping
 
 ## Getting Started
 
 ### Prerequisites
-- Ruby (version 2.7 or higher)
-- Bundler gem
+- Node.js (version 18 or higher)
 
 ### Installation
 
-1. Install dependencies:
 ```bash
-bundle install
+npm install
 ```
 
-2. Run the development server:
+### Development
+
 ```bash
-bundle exec jekyll serve
+npm run dev
 ```
 
-3. Visit `http://localhost:4000` in your browser
+Visit `http://localhost:4321` in your browser.
 
 ### Building for Production
 
-To build the site for deployment:
 ```bash
-bundle exec jekyll build
+npm run build
 ```
 
-The built site will be in the `_site` directory.
+The built site will be in the `dist` directory.
 
 ## Site Structure
 
 ```
 intentional/
-├── _config.yml              # Site configuration
-├── _layouts/                # Page layouts
-│   ├── default.html        # Main layout with header/footer
-│   └── business.html       # Business page layout
-├── _businesses/             # Business division pages
-│   ├── intentional-fitout.md
-│   └── intentional-education.md
-├── assets/
-│   └── css/
-│       └── style.css       # Site styles
-├── index.html              # Homepage
-├── Gemfile                 # Ruby dependencies
-└── README.md              # This file
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro           # Main layout with header/footer
+│   ├── components/
+│   │   ├── StructuredData.astro   # JSON-LD structured data
+│   │   └── GoogleAnalytics.astro  # Analytics
+│   ├── content/
+│   │   └── businesses/            # Business page content (Markdown)
+│   │       ├── intentional-development.md
+│   │       ├── intentional-interiors.md
+│   │       ├── intentional-education.md
+│   │       └── intentional-landscaping.md
+│   ├── pages/
+│   │   ├── index.astro            # Homepage
+│   │   ├── 404.astro              # Error page
+│   │   ├── businesses/
+│   │   │   └── [slug].astro       # Dynamic business pages
+│   │   └── events/
+│   │       └── inclusion-celebration.astro
+│   └── styles/
+│       ├── style.css              # Main styles
+│       └── transitions.css        # View Transition styles
+├── public/
+│   └── assets/                    # Static assets (images, logos)
+├── astro.config.mjs               # Astro configuration
+├── package.json
+└── README.md
 ```
 
-## Customization
+## Key Features
 
-### Adding Content
-- Edit `index.html` to modify the homepage
-- Edit files in `_businesses/` to update business division pages
-- Modify `_config.yml` to change site-wide settings
-
-### Styling
-- Edit `assets/css/style.css` to customize the design
-- Colors are defined as CSS variables in the `:root` selector
-
-### Contact Information
-Update email addresses in:
-- `_config.yml` for the main site email
-- Each business page's front matter for division-specific emails
+- Astro with View Transitions for smooth client-side navigation
+- Scroll-triggered entrance animations
+- Responsive design (mobile-friendly)
+- SEO optimised with structured data and Open Graph tags
+- Content collection for business pages (Markdown)
+- Photo gallery with modal viewer and pagination
+- Google Analytics integration
 
 ## Deployment
 
-This site can be deployed to:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static hosting service
+Deployed to GitHub Pages. Push to `main` to trigger a build.
 
-For GitHub Pages, enable it in your repository settings and point to the `main` branch.
-
-## Features
-
-- Responsive design (mobile-friendly)
-- Clean, professional layout
-- SEO-optimized
-- Fast loading times
-- Easy to maintain and update
-
-## Support
+## Contact
 
 For questions or issues, contact: info@intentional.ae
