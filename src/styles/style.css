@@ -1376,6 +1376,52 @@ body {
   text-decoration: underline;
 }
 
+/* Event Countdown */
+.countdown-bar {
+  background: var(--dark-color);
+  padding: var(--spacing-md) var(--spacing-md);
+  text-align: center;
+}
+
+.countdown-units {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+
+.countdown-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 480px) {
+  .countdown-units {
+    gap: var(--spacing-md);
+  }
+
+  .countdown-number {
+    font-size: 1.75rem;
+  }
+}
+
 /* Event Banner */
 .event-banner {
   display: flex;
