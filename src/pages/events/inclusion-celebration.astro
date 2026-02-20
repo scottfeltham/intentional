@@ -3,9 +3,41 @@ import Layout from '../../layouts/Layout.astro';
 
 const title = 'The Intentional Inclusion Celebration';
 const description = 'A family-friendly festival celebrating inclusion for People of Determination, the chronically ill, cancer survivors, and those with mental health challenges. 3rd December 2026, Dubai.';
+
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'The Intentional Inclusion Celebration',
+  description: 'A family-friendly festival celebrating inclusion for People of Determination, the chronically ill, cancer survivors, and those living with mental health challenges.',
+  startDate: '2026-12-03',
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  location: {
+    '@type': 'Place',
+    name: 'Outdoor Venue (TBC)',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Dubai',
+      addressCountry: 'AE',
+    },
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'The Intentional Group',
+    url: 'https://intentional.ae',
+  },
+  image: 'https://intentional.ae/assets/images/intentional-logo.png',
+  url: 'https://intentional.ae/events/inclusion-celebration/',
+  isAccessibleForFree: true,
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'Everyone - families, People of Determination, community members',
+  },
+};
 ---
 
 <Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(eventSchema)} />
   <div class="event-hero">
     <div class="event-hero-content">
       <span class="event-date-badge">3rd December 2026</span>
