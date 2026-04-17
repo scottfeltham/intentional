@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import '../styles/style.css';
 import '../styles/transitions.css';
 import StructuredData from '../components/StructuredData.astro';
@@ -84,7 +84,7 @@ const currentYear = new Date().getFullYear();
   <!-- Google Analytics -->
   <GoogleAnalytics />
 
-  <ViewTransitions />
+  <ClientRouter />
 </head>
 <body style={color ? `--division-color: ${color};` : undefined}>
   <!-- Skip to main content link for accessibility -->
