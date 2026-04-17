@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "google-analytics": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "analytics-mcp"
+      ],
+      "env": {}
+    }
+  }
+}
