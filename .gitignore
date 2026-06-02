@@ -18,3 +18,6 @@ node_modules/
 
 # Forge
 .forge/
+
+# Raw GA exports (keep monthly raw data out of the repo)
+docs/GA/
