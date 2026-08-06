@@ -4,25 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monthly Website Report — 1 March – 1 April 2026 — intentional.ae</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --earth: #3a2f22;
-    --sand: #faf6ee;
-    --sand-2: #f1e9d8;
-    --sand-3: #ebe3d4;
-    --accent: #a97a44;
-    --accent-2: #d9b48a;
-    --text: #3a2f22;
-    --muted: #8a7a5c;
+    --earth: #1e3a5f;
+    --sand: #f8fafc;
+    --sand-2: #eff6ff;
+    --sand-3: #dbeafe;
+    --accent: #2c5282;
+    --accent-2: #60a5fa;
+    --text: #1e293b;
+    --muted: #64748b;
   }
   * { box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: var(--sand);
     color: var(--text);
     margin: 0;
     padding: 40px 24px;
-    line-height: 1.5;
+    line-height: 1.6;
+    font-size: 16px;
   }
   .page {
     max-width: 840px;
@@ -106,17 +108,18 @@
     .signoff .nf-logo { justify-self: start; }
   }
   h2 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 0.2px;
-    margin: 36px 0 6px 0;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--sand-3);
+    margin: 40px 0 8px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--earth);
   }
   .section-intro {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--muted);
-    margin: 0 0 16px 0;
+    margin: 0 0 18px 0;
   }
   .kpis {
     display: grid;
@@ -137,23 +140,23 @@
     margin-bottom: 6px;
   }
   .kpi .value {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 600;
     color: var(--earth);
     line-height: 1.1;
   }
   .kpi .note {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
-    margin-top: 4px;
+    margin-top: 5px;
   }
   .bar-row {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 10px;
-    padding: 6px 0;
-    font-size: 14px;
+    padding: 8px 0;
+    font-size: 15px;
     border-bottom: 1px dotted var(--sand-3);
   }
   .bar-row:last-child { border-bottom: none; }
@@ -246,12 +249,13 @@
     margin: 4px 0 0 0;
   }
   ul.maint-list li {
-    padding: 8px 0;
+    padding: 10px 0;
     border-bottom: 1px dotted var(--sand-3);
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.5;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
   }
   ul.maint-list li:last-child { border-bottom: none; }
   ul.maint-list li::before {
@@ -346,10 +350,10 @@
   <h2>Visitors day by day</h2>
   <p class="section-intro">Daily unique visitors across the month.</p>
   <div class="chart-wrap"><svg viewBox="0 0 700 180" class="line-chart" role="img" aria-label="Daily visitors">
-        <line x1="28" x2="672" y1="152.0" y2="152.0" stroke="#ebe3d4" stroke-dasharray="2 3"/><text x="22" y="156.0" text-anchor="end" font-size="11" fill="#8a7a5c">0</text><line x1="28" x2="672" y1="90.0" y2="90.0" stroke="#ebe3d4" stroke-dasharray="2 3"/><text x="22" y="94.0" text-anchor="end" font-size="11" fill="#8a7a5c">7</text><line x1="28" x2="672" y1="28.0" y2="28.0" stroke="#ebe3d4" stroke-dasharray="2 3"/><text x="22" y="32.0" text-anchor="end" font-size="11" fill="#8a7a5c">14</text>
-        <polyline fill="none" stroke="#a97a44" stroke-width="2" points="28.0,143.1 54.8,143.1 81.7,134.3 108.5,125.4 135.3,143.1 162.2,125.4 189.0,134.3 215.8,143.1 242.7,63.4 269.5,72.3 296.3,107.7 323.2,125.4 350.0,143.1 376.8,143.1 403.7,134.3 430.5,98.9 457.3,107.7 484.2,116.6 511.0,116.6 537.8,134.3 564.7,107.7 591.5,28.0 618.3,143.1 645.2,152.0 672.0,143.1"/>
-        <circle cx="28.0" cy="143.1" r="3" fill="#a97a44"/><circle cx="54.8" cy="143.1" r="3" fill="#a97a44"/><circle cx="81.7" cy="134.3" r="3" fill="#a97a44"/><circle cx="108.5" cy="125.4" r="3" fill="#a97a44"/><circle cx="135.3" cy="143.1" r="3" fill="#a97a44"/><circle cx="162.2" cy="125.4" r="3" fill="#a97a44"/><circle cx="189.0" cy="134.3" r="3" fill="#a97a44"/><circle cx="215.8" cy="143.1" r="3" fill="#a97a44"/><circle cx="242.7" cy="63.4" r="3" fill="#a97a44"/><circle cx="269.5" cy="72.3" r="3" fill="#a97a44"/><circle cx="296.3" cy="107.7" r="3" fill="#a97a44"/><circle cx="323.2" cy="125.4" r="3" fill="#a97a44"/><circle cx="350.0" cy="143.1" r="3" fill="#a97a44"/><circle cx="376.8" cy="143.1" r="3" fill="#a97a44"/><circle cx="403.7" cy="134.3" r="3" fill="#a97a44"/><circle cx="430.5" cy="98.9" r="3" fill="#a97a44"/><circle cx="457.3" cy="107.7" r="3" fill="#a97a44"/><circle cx="484.2" cy="116.6" r="3" fill="#a97a44"/><circle cx="511.0" cy="116.6" r="3" fill="#a97a44"/><circle cx="537.8" cy="134.3" r="3" fill="#a97a44"/><circle cx="564.7" cy="107.7" r="3" fill="#a97a44"/><circle cx="591.5" cy="28.0" r="3" fill="#a97a44"/><circle cx="618.3" cy="143.1" r="3" fill="#a97a44"/><circle cx="645.2" cy="152.0" r="3" fill="#a97a44"/><circle cx="672.0" cy="143.1" r="3" fill="#a97a44"/>
-        <text x="28.0" y="172" text-anchor="middle" font-size="11" fill="#8a7a5c">01 Mar</text><text x="350.0" y="172" text-anchor="middle" font-size="11" fill="#8a7a5c">15 Mar</text><text x="672.0" y="172" text-anchor="middle" font-size="11" fill="#8a7a5c">01 Apr</text>
+        <line x1="28" x2="672" y1="152.0" y2="152.0" stroke="#e2e8f0" stroke-dasharray="2 3"/><text x="22" y="156.0" text-anchor="end" font-size="11" fill="#64748b">0</text><line x1="28" x2="672" y1="90.0" y2="90.0" stroke="#e2e8f0" stroke-dasharray="2 3"/><text x="22" y="94.0" text-anchor="end" font-size="11" fill="#64748b">7</text><line x1="28" x2="672" y1="28.0" y2="28.0" stroke="#e2e8f0" stroke-dasharray="2 3"/><text x="22" y="32.0" text-anchor="end" font-size="11" fill="#64748b">14</text>
+        <polyline fill="none" stroke="#2c5282" stroke-width="2" points="28.0,143.1 54.8,143.1 81.7,134.3 108.5,125.4 135.3,143.1 162.2,125.4 189.0,134.3 215.8,143.1 242.7,63.4 269.5,72.3 296.3,107.7 323.2,125.4 350.0,143.1 376.8,143.1 403.7,134.3 430.5,98.9 457.3,107.7 484.2,116.6 511.0,116.6 537.8,134.3 564.7,107.7 591.5,28.0 618.3,143.1 645.2,152.0 672.0,143.1"/>
+        <circle cx="28.0" cy="143.1" r="3" fill="#2c5282"/><circle cx="54.8" cy="143.1" r="3" fill="#2c5282"/><circle cx="81.7" cy="134.3" r="3" fill="#2c5282"/><circle cx="108.5" cy="125.4" r="3" fill="#2c5282"/><circle cx="135.3" cy="143.1" r="3" fill="#2c5282"/><circle cx="162.2" cy="125.4" r="3" fill="#2c5282"/><circle cx="189.0" cy="134.3" r="3" fill="#2c5282"/><circle cx="215.8" cy="143.1" r="3" fill="#2c5282"/><circle cx="242.7" cy="63.4" r="3" fill="#2c5282"/><circle cx="269.5" cy="72.3" r="3" fill="#2c5282"/><circle cx="296.3" cy="107.7" r="3" fill="#2c5282"/><circle cx="323.2" cy="125.4" r="3" fill="#2c5282"/><circle cx="350.0" cy="143.1" r="3" fill="#2c5282"/><circle cx="376.8" cy="143.1" r="3" fill="#2c5282"/><circle cx="403.7" cy="134.3" r="3" fill="#2c5282"/><circle cx="430.5" cy="98.9" r="3" fill="#2c5282"/><circle cx="457.3" cy="107.7" r="3" fill="#2c5282"/><circle cx="484.2" cy="116.6" r="3" fill="#2c5282"/><circle cx="511.0" cy="116.6" r="3" fill="#2c5282"/><circle cx="537.8" cy="134.3" r="3" fill="#2c5282"/><circle cx="564.7" cy="107.7" r="3" fill="#2c5282"/><circle cx="591.5" cy="28.0" r="3" fill="#2c5282"/><circle cx="618.3" cy="143.1" r="3" fill="#2c5282"/><circle cx="645.2" cy="152.0" r="3" fill="#2c5282"/><circle cx="672.0" cy="143.1" r="3" fill="#2c5282"/>
+        <text x="28.0" y="172" text-anchor="middle" font-size="11" fill="#64748b">01 Mar</text><text x="350.0" y="172" text-anchor="middle" font-size="11" fill="#64748b">15 Mar</text><text x="672.0" y="172" text-anchor="middle" font-size="11" fill="#64748b">01 Apr</text>
     </svg></div>
 
   <h2>Most visited pages</h2>
@@ -373,10 +377,10 @@
   <h2>What they used</h2>
   <p class="section-intro">The device type visitors browsed on.</p>
   <div class="donut-wrap"><svg viewBox="0 0 180 180" width="180" height="180">
-        <path d="M 90.00 10.00 A 80.0 80.0 0 1 1 78.08 169.11 L 82.85 137.46 A 48.0 48.0 0 1 0 90.00 42.00 Z" fill="#d9b48a"/><path d="M 78.08 169.11 A 80.0 80.0 0 0 1 90.00 10.00 L 90.00 42.00 A 48.0 48.0 0 0 0 82.85 137.46 Z" fill="#a97a44"/>
-        <text x="90.0" y="86.0" text-anchor="middle" font-size="22" font-weight="600" fill="#3a2f22">84</text>
-        <text x="90.0" y="104.0" text-anchor="middle" font-size="11" fill="#8a7a5c">visitors</text>
-    </svg><div class="legend"><div class="legend-item"><span class="swatch" style="background:#d9b48a"></span>Mobile <strong>52%</strong> <span class="muted">(44)</span></div><div class="legend-item"><span class="swatch" style="background:#a97a44"></span>Desktop <strong>48%</strong> <span class="muted">(40)</span></div></div></div>
+        <path d="M 90.00 10.00 A 80.0 80.0 0 1 1 78.08 169.11 L 82.85 137.46 A 48.0 48.0 0 1 0 90.00 42.00 Z" fill="#60a5fa"/><path d="M 78.08 169.11 A 80.0 80.0 0 0 1 90.00 10.00 L 90.00 42.00 A 48.0 48.0 0 0 0 82.85 137.46 Z" fill="#2c5282"/>
+        <text x="90.0" y="86.0" text-anchor="middle" font-size="22" font-weight="600" fill="#1e293b">84</text>
+        <text x="90.0" y="104.0" text-anchor="middle" font-size="11" fill="#64748b">visitors</text>
+    </svg><div class="legend"><div class="legend-item"><span class="swatch" style="background:#60a5fa"></span>Mobile <strong>52%</strong> <span class="muted">(44)</span></div><div class="legend-item"><span class="swatch" style="background:#2c5282"></span>Desktop <strong>48%</strong> <span class="muted">(40)</span></div></div></div>
 
   <h2>Maintenance performed this month</h2>
   <p class="section-intro">Behind-the-scenes work carried out on the site during this period.</p>
@@ -385,26 +389,26 @@
     <h3>Software updated</h3>
     <table class="updates">
       <thead><tr><td class="muted">component</td><td class="muted">from</td><td></td><td class="muted">to</td><td class="muted">notes</td></tr></thead>
-      <tbody><tr><td>Astro (site framework)</td><td class="mono">4.16.19</td><td class="arrow">→</td><td class="mono">6.1.7</td><td class="muted">major version — two releases jumped</td></tr><tr><td>@astrojs/sitemap</td><td class="mono">3.1.6</td><td class="arrow">→</td><td class="mono">3.7.2</td><td class="muted">minor update</td></tr><tr><td>Build runtime (Node.js)</td><td class="mono">20</td><td class="arrow">→</td><td class="mono">22</td><td class="muted">required by the new Astro version</td></tr></tbody>
+      <tbody><tr><td>Site software (Astro)</td><td class="mono">version 4</td><td class="arrow">→</td><td class="mono">version 6</td><td class="muted">the platform your site is built on — two major releases newer</td></tr><tr><td>Sitemap tool</td><td class="mono">3.1</td><td class="arrow">→</td><td class="mono">3.7</td><td class="muted">helps search engines find all your pages</td></tr><tr><td>Build system</td><td class="mono">Node 20</td><td class="arrow">→</td><td class="mono">Node 22</td><td class="muted">required to work with the newer site software</td></tr></tbody>
     </table>
   </div>
 
   <div class="maint-band">
     <h3>Security advisories resolved</h3>
     <p class="muted" style="margin:0 0 8px 0; font-size:13px;">Known vulnerabilities that were patched by the updates above.</p>
-    <ul class="maint-list security"><li><span class="sev-pill sev-high">HIGH</span> Astro — authentication bypass via double URL encoding</li><li><span class="sev-pill sev-high">HIGH</span> Astro — reflected XSS via server islands feature</li><li><span class="sev-pill sev-high">HIGH</span> Astro — arbitrary local file read in dev server</li><li><span class="sev-pill sev-high">HIGH</span> Astro — middleware bypass via URL-encoded values</li><li><span class="sev-pill sev-high">HIGH</span> Astro — X-Forwarded-Host reflected without validation</li><li><span class="sev-pill sev-mod">MODERATE</span> devalue — prototype pollution and sparse array amplification</li><li><span class="sev-pill sev-mod">MODERATE</span> esbuild — dev server responds to any website&#x27;s requests</li><li><span class="sev-pill sev-mod">MODERATE</span> vite — multiple moderate advisories (transitive)</li></ul>
+    <ul class="maint-list security"><li><span class="sev-pill sev-high">SERIOUS</span> Fixed a flaw that could let someone bypass login checks on sites using protected areas</li><li><span class="sev-pill sev-high">SERIOUS</span> Fixed a way malicious code could be injected into pages a visitor sees</li><li><span class="sev-pill sev-high">SERIOUS</span> Fixed a bug that could reveal internal files to an attacker during development</li><li><span class="sev-pill sev-high">SERIOUS</span> Fixed another login-check bypass using specially-encoded web addresses</li><li><span class="sev-pill sev-high">SERIOUS</span> Fixed a flaw that could let a malicious site trick yours into trusting it</li><li><span class="sev-pill sev-mod">MODERATE</span> Fixed a handful of smaller issues in supporting tools the site uses internally</li><li><span class="sev-pill sev-mod">MODERATE</span> Fixed a development-tool bug that could expose data during local testing</li><li><span class="sev-pill sev-mod">MODERATE</span> Patched general security updates in the build tools</li></ul>
   </div>
 
   <div class="maint-band">
     <h3>Code migrated for the new version</h3>
     <p class="muted" style="margin:0 0 8px 0; font-size:13px;">Small internal adjustments required by the framework upgrade.</p>
-    <ul class="maint-list"><li>Content collections moved from legacy API to the new loader-based API (required by Astro 6)</li><li>Page transition component renamed from &lt;ViewTransitions /&gt; to &lt;ClientRouter /&gt;</li><li>Content config relocated from src/content/config.ts to src/content.config.ts</li></ul>
+    <ul class="maint-list"><li>Updated the internal way the site reads and displays your business page content so it works with the new platform version.</li><li>Updated the page-transition feature (the smooth fade between pages) to use the new component name the platform now expects.</li></ul>
   </div>
 
   <div class="maint-band">
     <h3>Verification</h3>
     <p class="muted" style="margin:0 0 8px 0; font-size:13px;">Checks confirming the site is healthy after the work.</p>
-    <ul class="maint-list"><li>Production build passes — 7 pages generated cleanly</li><li>Local dev server smoke-tested: homepage, business page, event page all responding</li><li>Security audit: 0 vulnerabilities remaining (was 6 — 3 high, 3 moderate)</li></ul>
+    <ul class="maint-list"><li>The site was rebuilt from scratch — all 7 pages generated without any errors.</li><li>The site was tested locally: homepage, a business page, and the event page all loaded and worked correctly.</li><li>The site was scanned for known security problems — all 8 issues (5 serious, 3 smaller) have been fixed.</li></ul>
   </div>
 
   <section class="signoff">
