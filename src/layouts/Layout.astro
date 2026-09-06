@@ -14,6 +14,7 @@ interface Props {
   heroImage?: string;
   isBusinessPage?: boolean;
   email?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   heroImage,
   isBusinessPage = false,
   email,
+  noindex = false,
 } = Astro.props;
 
 const siteTitle = 'The Intentional Group';
@@ -50,8 +52,8 @@ const currentYear = new Date().getFullYear();
   <!-- Meta Description -->
   <meta name="description" content={metaDescription}>
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href={`https://intentional.ae${pathname}`}>
+  <!-- Canonical URL (omitted on noindex pages such as 404) -->
+  {!noindex && <link rel="canonical" href={`https://intentional.ae${pathname}`} />}
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content={ogType}>
@@ -69,7 +71,7 @@ const currentYear = new Date().getFullYear();
   <meta name="twitter:image" content={ogImage}>
 
   <!-- Additional SEO Meta -->
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'}>
   <meta name="author" content="The Intentional Group">
   <meta name="geo.region" content="AE-DU">
   <meta name="geo.placename" content="Dubai">
