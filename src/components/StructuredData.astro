@@ -40,18 +40,18 @@ const orgSchema = {
   logo: 'https://intentional.ae/assets/images/intentional-logo.png',
   description: 'The Intentional Group delivers excellence in Property Development, Design & Build Interiors, Education, and Landscaping across the UAE and beyond.',
   email: 'info@intentional.ae',
-  telephone: '+971-4-357-4846',
+  telephone: '+97143574846',
   address: {
     '@type': 'PostalAddress',
     postOfficeBoxNumber: '72528',
     addressLocality: 'Dubai',
+    addressRegion: 'Dubai',
     addressCountry: 'AE',
   },
   areaServed: {
     '@type': 'Country',
     name: 'United Arab Emirates',
   },
-  sameAs: [],
   subOrganization: [
     { '@type': 'Organization', '@id': 'https://intentional.ae/businesses/intentional-development/#organization', name: 'Intentional Development' },
     { '@type': 'Organization', '@id': 'https://intentional.ae/businesses/intentional-interiors/#organization', name: 'Intentional Interiors' },
@@ -68,11 +68,12 @@ const businessSchema = isBusinessPage && title ? {
   description: tagline,
   url: `https://intentional.ae${url}`,
   email: email || siteEmail,
-  telephone: '+971-4-357-4846',
+  telephone: '+97143574846',
   address: {
     '@type': 'PostalAddress',
     postOfficeBoxNumber: '72528',
     addressLocality: 'Dubai',
+    addressRegion: 'Dubai',
     addressCountry: 'AE',
   },
   parentOrganization: {
@@ -91,7 +92,7 @@ const breadcrumbSchema = isBusinessPage ? {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://intentional.ae' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://intentional.ae/' },
     { '@type': 'ListItem', position: 2, name: title, item: `https://intentional.ae${url}` },
   ],
 } : null;
