@@ -7,25 +7,6 @@ const description = 'The Intentional Group delivers excellence in Property Devel
 ---
 
 <Layout title={title} fullTitle={fullTitle} description={description}>
-  <!-- Event Announcement Popup -->
-  <div class="announcement-overlay" id="event-popup" aria-modal="true" role="dialog" aria-label="Event announcement">
-    <div class="announcement-card">
-      <button type="button" class="announcement-close" aria-label="Close announcement">&times;</button>
-      <div class="announcement-header">
-        <h2>The Intentional<br>Inclusion Celebration</h2>
-        <p>A Festival to Celebrate Life</p>
-      </div>
-      <div class="announcement-body">
-        <span class="announcement-date">3rd December 2026 &middot; Dubai</span>
-        <p class="announcement-text">
-          A family-friendly festival celebrating inclusion for People of Determination, the chronically ill,
-          cancer survivors, and those with mental health challenges. Everyone is welcome.
-        </p>
-        <a href="https://tiic.intentional.ae/" class="btn" id="popup-learn-more">Learn More</a>
-      </div>
-    </div>
-  </div>
-
   <div class="hero" transition:name="hero" style="background: linear-gradient(135deg, rgba(44, 95, 111, 0.9), rgba(139, 111, 71, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80') center/cover;">
     <div class="hero-content">
       <h1>The Intentional Group</h1>
@@ -179,6 +160,25 @@ const description = 'The Intentional Group delivers excellence in Property Devel
       </div>
     </div>
   </section>
+
+  <!-- Event Announcement Popup -->
+  <div class="announcement-overlay" id="event-popup" aria-modal="true" role="dialog" aria-label="Event announcement">
+    <div class="announcement-card">
+      <button type="button" class="announcement-close" aria-label="Close announcement">&times;</button>
+      <div class="announcement-header">
+        <h2>The Intentional<br>Inclusion Celebration</h2>
+        <p>A Festival to Celebrate Life</p>
+      </div>
+      <div class="announcement-body">
+        <span class="announcement-date">3rd December 2026 &middot; Dubai</span>
+        <p class="announcement-text">
+          A family-friendly festival celebrating inclusion for People of Determination, the chronically ill,
+          cancer survivors, and those with mental health challenges. Everyone is welcome.
+        </p>
+        <a href="https://tiic.intentional.ae/" class="btn" id="popup-learn-more">Learn More</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Event popup script -->
   <script is:inline>

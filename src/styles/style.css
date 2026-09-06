@@ -1155,7 +1155,7 @@ body {
   margin-bottom: var(--spacing-md);
 }
 
-.footer-section h4 {
+.footer-section h3 {
   font-size: 1.25rem;
   margin-bottom: var(--spacing-sm);
   color: white;
