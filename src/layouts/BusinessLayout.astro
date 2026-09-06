@@ -8,10 +8,11 @@ interface Props {
   color: string;
   colorSecondary?: string;
   heroImage: string;
+  ogImage?: string;
   email: string;
 }
 
-const { title, tagline, description, color, colorSecondary, heroImage, email } = Astro.props;
+const { title, tagline, description, color, colorSecondary, heroImage, ogImage, email } = Astro.props;
 const defaultColor = '#8b6f47';
 const defaultSecondary = '#2c5f6f';
 const divisionColor = color || defaultColor;
@@ -23,7 +24,7 @@ const secondaryColor = colorSecondary || defaultSecondary;
   description={description}
   tagline={tagline}
   color={divisionColor}
-  heroImage={heroImage}
+  ogImage={ogImage}
   isBusinessPage={true}
   email={email}
 >

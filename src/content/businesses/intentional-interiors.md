@@ -5,6 +5,7 @@ description: "Design and build fitout for offices, hotels, F&B outlets, residenc
 color: "#8b6f47"
 color_secondary: "#2c5f6f"
 hero_image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80"
+og_image: "/assets/images/og/interiors.png"
 email: info@intentional.ae
 order: 1
 ---

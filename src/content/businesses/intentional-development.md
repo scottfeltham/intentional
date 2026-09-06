@@ -5,6 +5,7 @@ description: "Development and project management for industrial, port, airport, 
 color: "#5c4033"
 color_secondary: "#1a5f7a"
 hero_image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+og_image: "/assets/images/og/development.png"
 email: info@intentional.ae
 order: 3
 ---

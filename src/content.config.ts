@@ -10,6 +10,7 @@ const businesses = defineCollection({
     color: z.string(),
     color_secondary: z.string().optional(),
     hero_image: z.string(),
+    og_image: z.string().optional(),
     email: z.string(),
     order: z.number(),
   }),

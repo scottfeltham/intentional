@@ -5,6 +5,7 @@ description: "Landscaping, tree surgery and outdoor living for Dubai's premium v
 color: "#2d5a3d"
 color_secondary: "#8b6f47"
 hero_image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=2000&q=80"
+og_image: "/assets/images/og/landscaping.png"
 email: info@intentional.ae
 order: 4
 ---
