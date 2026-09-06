@@ -7,6 +7,7 @@ import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 interface Props {
   title: string;
+  fullTitle?: string;
   description?: string;
   tagline?: string;
   color?: string;
@@ -17,6 +18,7 @@ interface Props {
 
 const {
   title,
+  fullTitle,
   description,
   tagline,
   color,
@@ -25,7 +27,7 @@ const {
   email,
 } = Astro.props;
 
-const siteTitle = 'Intentional Group';
+const siteTitle = 'The Intentional Group';
 const siteDescription = 'The Intentional Group - Building Excellence in Property Development, Design & Build Interiors, Education, and Landscaping';
 const pathname = Astro.url.pathname;
 
@@ -33,6 +35,7 @@ const metaDescription = description || (tagline ? `${tagline} - ${title} is part
 const ogImage = heroImage || 'https://intentional.ae/assets/images/intentional-logo.png';
 const ogDescription = description || tagline || siteDescription;
 const ogType = isBusinessPage ? 'business.business' : 'website';
+const pageTitle = fullTitle || `${title} - ${siteTitle}`;
 const currentYear = new Date().getFullYear();
 ---
 
@@ -42,7 +45,7 @@ const currentYear = new Date().getFullYear();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{title} - {siteTitle}</title>
+  <title>{pageTitle}</title>
 
   <!-- Meta Description -->
   <meta name="description" content={metaDescription}>
@@ -53,7 +56,7 @@ const currentYear = new Date().getFullYear();
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content={ogType}>
   <meta property="og:url" content={`https://intentional.ae${pathname}`}>
-  <meta property="og:title" content={`${title} - ${siteTitle}`}>
+  <meta property="og:title" content={pageTitle}>
   <meta property="og:description" content={ogDescription}>
   <meta property="og:image" content={ogImage}>
   <meta property="og:locale" content="en_AE">
@@ -61,7 +64,7 @@ const currentYear = new Date().getFullYear();
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content={`${title} - ${siteTitle}`}>
+  <meta name="twitter:title" content={pageTitle}>
   <meta name="twitter:description" content={ogDescription}>
   <meta name="twitter:image" content={ogImage}>
 
