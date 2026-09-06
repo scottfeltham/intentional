@@ -1,7 +1,7 @@
 ---
 title: Intentional Landscaping
 tagline: Transforming Outdoor Spaces
-description: "Intentional Landscaping delivers professional landscaping, tree surgery, and outdoor living solutions across Dubai through our specialist companies - Upgraded Landscaping and DXB Tree Specialists."
+description: "Landscaping, tree surgery and outdoor living for Dubai's premium villas and communities, from DXB Tree Specialists and Upgraded Landscaping."
 color: "#2d5a3d"
 color_secondary: "#8b6f47"
 hero_image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=2000&q=80"
