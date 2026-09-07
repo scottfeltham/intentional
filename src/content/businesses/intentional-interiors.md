@@ -1,10 +1,11 @@
 ---
 title: Intentional Interiors
 tagline: Transforming Spaces, Inspiring Excellence
-description: "Intentional Interiors delivers expert Design & Build fitout solutions for offices, hotels, F&B outlets, residences and educational spaces across the UAE. Complete project management from concept to handover."
+description: "Design and build fitout for offices, hotels, F&B outlets, residences and educational spaces across the UAE, project managed from concept to handover."
 color: "#8b6f47"
 color_secondary: "#2c5f6f"
 hero_image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80"
+og_image: "/assets/images/og/interiors.png"
 email: info@intentional.ae
 order: 1
 ---
@@ -58,58 +59,58 @@ Our integrated design and build approach streamlines the fitout process, ensurin
 <div class="photo-gallery">
   <div class="gallery-grid">
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/ACUM6484.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/ACUM6484.JPG" width="1170" height="1003" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/BMBP2032.JPEG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/BMBP2032.JPEG" width="1225" height="1280" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_1367.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_1367.JPG" width="750" height="750" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_4823.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_4823.JPG" width="1200" height="1600" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_6855.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_6855.JPG" width="1200" height="1200" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8639.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8639.JPG" width="800" height="800" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8641.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8641.JPG" width="800" height="800" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8658.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8658.JPG" width="800" height="800" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8659.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8659.JPG" width="800" height="800" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8676.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8676.JPG" width="800" height="800" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8681.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8681.JPG" width="750" height="750" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8682.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8682.JPG" width="750" height="750" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8683.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8683.JPG" width="750" height="750" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8685.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8685.JPG" width="800" height="800" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8686.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8686.JPG" width="678" height="673" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8711.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8711.JPG" width="728" height="728" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/IMG_8712.JPG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/IMG_8712.JPG" width="1600" height="1600" alt="Interior project" loading="lazy" decoding="async">
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/interiors/VRUI0898.JPEG" alt="Interior project" loading="lazy">
+      <img src="/assets/images/gallery/interiors/VRUI0898.JPEG" width="1280" height="1065" alt="Interior project" loading="lazy" decoding="async">
     </div>
   </div>
 </div>

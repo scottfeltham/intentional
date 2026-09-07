@@ -1,10 +1,11 @@
 ---
 title: Intentional Education
 tagline: Empowering Learning, Inspiring Growth
-description: "Intentional Education partners with schools and institutions across the UAE to deliver educational consulting, curriculum development, professional development programmes and innovative learning solutions."
+description: "Educational consulting, curriculum development, teacher training and learning solutions for schools and institutions across the UAE and beyond."
 color: "#1a5f7a"
 color_secondary: "#8b6f47"
 hero_image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=2000&q=80"
+og_image: "/assets/images/og/education.png"
 email: education@intentional.ae
 order: 2
 ---

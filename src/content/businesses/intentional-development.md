@@ -1,10 +1,11 @@
 ---
 title: Intentional Development
 tagline: Development & Project Management Excellence
-description: "Intentional Development provides Development Management and Project Management services for industrial, airport, commercial and retail projects in the UAE. Currently delivering The Jubilee Community master plan."
+description: "Development and project management for industrial, port, airport, commercial and retail projects in the UAE, from feasibility study through to handover."
 color: "#5c4033"
 color_secondary: "#1a5f7a"
 hero_image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+og_image: "/assets/images/og/development.png"
 email: info@intentional.ae
 order: 3
 ---
@@ -70,63 +71,63 @@ As part of The Intentional Group, we bring:
 <div class="photo-gallery">
   <div class="gallery-grid">
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image1.jpeg" alt="Wafi Mall, Dubai - Aerial construction view" loading="lazy">
+      <img src="/assets/images/gallery/development/image1.jpeg" width="1600" height="1200" alt="Wafi Mall, Dubai - Aerial construction view" loading="lazy" decoding="async">
       <span class="gallery-label">Wafi Mall, Dubai</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image2.jpg" alt="Wafi Mall, Dubai - Construction site" loading="lazy">
+      <img src="/assets/images/gallery/development/image2.jpg" width="800" height="557" alt="Wafi Mall, Dubai - Construction site" loading="lazy" decoding="async">
       <span class="gallery-label">Wafi Mall, Dubai</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image3.jpeg" alt="Jaber Mall" loading="lazy">
+      <img src="/assets/images/gallery/development/image3.jpeg" width="1242" height="1553" alt="Jaber Mall" loading="lazy" decoding="async">
       <span class="gallery-label">Jaber Mall</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image4.jpg" alt="Sheikh Zayed Grand Mosque" loading="lazy">
+      <img src="/assets/images/gallery/development/image4.jpg" width="1600" height="1600" alt="Sheikh Zayed Grand Mosque" loading="lazy" decoding="async">
       <span class="gallery-label">Sheikh Zayed Grand Mosque</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image5.jpg" alt="Sheikh Zayed Desert Learning Centre" loading="lazy">
+      <img src="/assets/images/gallery/development/image5.jpg" width="1600" height="900" alt="Sheikh Zayed Desert Learning Centre" loading="lazy" decoding="async">
       <span class="gallery-label">Sheikh Zayed Desert Learning Centre</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image6.jpg" alt="West Bay Complex including Four Seasons Hotel" loading="lazy">
+      <img src="/assets/images/gallery/development/image6.jpg" width="1600" height="896" alt="West Bay Complex including Four Seasons Hotel" loading="lazy" decoding="async">
       <span class="gallery-label">West Bay Complex, Four Seasons Hotel</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image7.jpg" alt="Al Ain Wildlife Park and Resort" loading="lazy">
+      <img src="/assets/images/gallery/development/image7.jpg" width="1600" height="900" alt="Al Ain Wildlife Park and Resort" loading="lazy" decoding="async">
       <span class="gallery-label">Al Ain Wildlife Park and Resort</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image8.jpg" alt="Wisdom Tree Residential Complex, Bangalore" loading="lazy">
+      <img src="/assets/images/gallery/development/image8.jpg" width="1248" height="648" alt="Wisdom Tree Residential Complex, Bangalore" loading="lazy" decoding="async">
       <span class="gallery-label">Wisdom Tree Residential, Bangalore</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image9.jpeg" alt="Mubarak Al Kabeer Container Port" loading="lazy">
+      <img src="/assets/images/gallery/development/image9.jpeg" width="1200" height="672" alt="Mubarak Al Kabeer Container Port" loading="lazy" decoding="async">
       <span class="gallery-label">Mubarak Al Kabeer Container Port</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image10.jpeg" alt="Adma-Opco Adgas Headquarters, Abu Dhabi" loading="lazy">
+      <img src="/assets/images/gallery/development/image10.jpeg" width="1600" height="2231" alt="Adma-Opco Adgas Headquarters, Abu Dhabi" loading="lazy" decoding="async">
       <span class="gallery-label">Adma-Opco Adgas Headquarters</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image11.jpg" alt="Amiri Flight, Abu Dhabi" loading="lazy">
+      <img src="/assets/images/gallery/development/image11.jpg" width="684" height="473" alt="Amiri Flight, Abu Dhabi" loading="lazy" decoding="async">
       <span class="gallery-label">Amiri Flight, Abu Dhabi</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image12.jpg" alt="Four Seasons, Doha Spa" loading="lazy">
+      <img src="/assets/images/gallery/development/image12.jpg" width="760" height="507" alt="Four Seasons, Doha Spa" loading="lazy" decoding="async">
       <span class="gallery-label">Four Seasons Spa, Doha</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image13.jpg" alt="Dubai Creek Marina Harbour Terminus" loading="lazy">
+      <img src="/assets/images/gallery/development/image13.jpg" width="1600" height="900" alt="Dubai Creek Marina Harbour Terminus" loading="lazy" decoding="async">
       <span class="gallery-label">Dubai Creek Marina Harbour</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image14.jpg" alt="Etihad Museum" loading="lazy">
+      <img src="/assets/images/gallery/development/image14.jpg" width="1600" height="1067" alt="Etihad Museum" loading="lazy" decoding="async">
       <span class="gallery-label">Etihad Museum</span>
     </div>
     <div class="gallery-item">
-      <img src="/assets/images/gallery/development/image15.jpg" alt="Abu Dhabi Ship Building Shipyard" loading="lazy">
+      <img src="/assets/images/gallery/development/image15.jpg" width="1600" height="683" alt="Abu Dhabi Ship Building Shipyard" loading="lazy" decoding="async">
       <span class="gallery-label">Abu Dhabi Ship Building Shipyard</span>
     </div>
   </div>
